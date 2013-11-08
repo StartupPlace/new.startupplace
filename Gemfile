@@ -43,3 +43,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use boostrap as css framework
+gem 'bootstrap-sass', '2.3.2.0'
