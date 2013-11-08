@@ -1,0 +1,128 @@
+
+/* Higher than 1200 (desktop devices)
+====================================================================== */
+@media only screen and (min-width: 1200px) {
+  .nav-collapse {
+    float: right;
+  }
+}
+
+/* Higher than 960 (desktop devices)
+====================================================================== */
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  .nav-collapse {
+    float: right;
+  }
+  .navbar .nav > li > a {
+    padding: 22px 10px;
+  }
+  .flexslider.home {
+    min-height: 300px;
+  }
+}
+
+/* Tablet Portrait (devices and browsers)
+====================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  header {
+    min-height: 64px;
+  }
+  .brand {
+    margin-top: 10px !important;
+  }
+  .navbar .nav > li > a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  ol li ol.childlist .comment-des {
+    width: 86%;
+  }
+}
+
+/* All Mobile Sizes (devices and browser)
+====================================================================== */
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 0px;
+  }
+  header, #wrapper, #footer-menu, #footer {
+    padding: 0px 10px;
+  }
+  .brand {
+    margin-top: 10px !important;
+  }
+  #contact-details {
+    text-align: center;
+    float: left;
+  }
+  .post-meta {
+    display: none;
+  }
+  .post-title h2 {
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  .post-icon {
+    margin-top: 28px;
+  }
+  #filters {
+    position: relative;
+    text-align: left;
+    display: block;
+    margin: 0 0 23px 0;
+  }
+  #portfolio-navi {
+    position: relative;
+    text-align: left;
+    display: block;
+    margin: 0 0 23px 0;
+    margin: -5px 0 25px 0;
+  }
+  .portfolio-item {
+    margin: 5px 0 25px 0 !important;
+  }
+  .item-description.related {
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers)
+====================================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  header {
+    min-height: 64px;
+  }
+  .navbar .nav > li > a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  .flickr-widget a {
+    width: 53px;
+    height: 53px;
+  }
+  ol li ol.childlist .comment-des {
+    width: 82%;
+  }
+  .comment-des {
+    width: 83%;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+=================================================================== */
+@media only screen and (max-width: 479px) {
+  header {
+    min-height: 64px;
+  }
+  .navbar .nav > li > a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  ol li ol.childlist .comment-des {
+    width: 77%;
+  }
+  .comment-des {
+    width: 78%;
+  }
+}

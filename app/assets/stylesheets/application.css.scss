@@ -8,7 +8,371 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap_and_overrides
+ *= require icons
+ *= require social-icons
  *= require_self
- *= require_tree .
  */
 
+@import "reset-app";
+@import "header";
+@import "footer";
+@import "social";
+@import "flex-slider";
+@import "responsive";
+
+
+/* News */
+
+.home-entry {
+  h2 {
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 17px;
+    margin: 10px 35px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .picture {
+    border: 1px solid #ccc;
+    vertical-align: baseline;
+    border-radius: 50% / 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 5px 10px;
+    clip: rect(12px, auto, 24px, 0);
+  }
+}
+
+div.newsletter div.item-description {
+  padding-top: 10px;
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.picture {
+  position: relative;
+  border: 1px solid #ccc;
+  .item-description {
+    padding: 5px 15px;
+    border: none;
+    margin: 0px;
+  }
+}
+
+.post .picture, #portfolio-wrapper .picture {
+  position: relative;
+  background: #fff;
+  padding: 3px;
+  border: 1px solid #fcfcfc;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.post .picture {
+  margin-bottom: 0px;
+  padding: 5px;
+  border: none;
+  margin: 0px;
+}
+
+#portfolio-wrapper {
+  .picture .item-description {
+    margin-bottom: 0px;
+    padding: 5px;
+    border: none;
+    margin: 0px;
+  }
+  .portfolio-item {
+    margin-bottom: 20px;
+    .title {
+      font-size: 23px;
+      line-height: 24px;
+      text-align: center;
+      border: 0;
+    }
+  }
+}
+
+.portfolio-item {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+}
+
+.image-overlay-link, .image-overlay-zoom {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 40;
+  display: none;
+  background-color: #222;
+  background: rgba(0, 0, 0, 0.4);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+.image-overlay-link {
+  background-image: url(overlay-icon-01.png);
+}
+
+.image-overlay-zoom {
+  background-image: url(overlay-icon-02.png);
+}
+
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  overflow: hidden;
+  border: 4px solid #fff;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  &.widescreen {
+    padding-bottom: 57.25%;
+  }
+  &.vimeo {
+    padding-top: 0;
+  }
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video {
+    padding-top: 0;
+  }
+}
+
+/* Icon Boxes */
+
+.icons-box-container, .icons-boxes-container {
+  float: left;
+}
+
+.icons-box {
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 20px 10px 10px 10px;
+  &:hover {
+    background: #fcfcfc;
+    border: 1px solid #f6f6f6;
+  }
+  h3 {
+    margin: 0 auto;
+    padding-top: 10px;
+    border-bottom: 3px double #f6f6f6;
+    margin-bottom: 10px;
+  }
+  p {
+    float: left;
+  }
+  i {
+    float: left;
+    margin: -2px 0 0px 0;
+    &.circle, &.circle-color, &.circle-color-full {
+      float: none !important;
+      margin: 0 auto !important;
+    }
+  }
+  .title {
+    margin-top: 10px;
+  }
+}
+
+.circle {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 1);
+  margin: 0 auto;
+  opacity: .1;
+  filter: alpha(opacity = 10);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+}
+
+.big {
+  border: 20px solid #fff !important;
+}
+
+.ico-color {
+  background-image: url("../img/icons/blue/glyphicons.png");
+  opacity: 1;
+}
+
+.mini-color {
+  background-image: url("../img/icons/blue/glyphicons-mini.png");
+  opacity: 1;
+}
+
+.circle-color {
+  background-color: #fff;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  -webkit-box-shadow: 0px 0px 0px 3px #29a9df;
+  -moz-box-shadow: 0px 0px 0px 3px #29a9df;
+  box-shadow: 0px 0px 0px 3px #29a9df;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.circle-color-full {
+  background-color: #29a9df;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  -webkit-box-shadow: 0px 0px 0px 3px #29a9df;
+  -moz-box-shadow: 0px 0px 0px 3px #29a9df;
+  box-shadow: 0px 0px 0px 3px #29a9df;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.big-color {
+  border: 20px solid #29a9df !important;
+}
+
+/* Icon Boxes Vert
+=================================================================== */
+
+.icons-box-vert-container, .icons-boxes-vert-container {
+  float: left;
+}
+
+.icons-box-vert {
+  border: 1px solid #fff;
+  padding: 30px 15px 10px 15px;
+  &:hover {
+    background: #fcfcfc;
+    border: 1px solid #f6f6f6;
+  }
+}
+
+.icons-box-vert-info {
+  float: right;
+  margin-top: -6px;
+  margin-bottom: 6px;
+  margin-left: 20px;
+  width: 70%;
+}
+
+.icons-box-vert {
+  h3 {
+    float: left;
+    margin-top: -10px;
+  }
+  p {
+    float: left !important;
+  }
+  i {
+    float: left;
+    &.circle {
+      float: left !important;
+      -webkit-border-radius: 50em;
+      -moz-border-radius: 50em;
+      border-radius: 50em;
+      -webkit-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 1);
+      box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 1);
+      opacity: .1;
+      filter: alpha(opacity = 10);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    }
+  }
+}
+
+.icons-left {
+  float: left;
+}
+
+/* Google Map
+=================================================================== */
+
+#googlemaps-container-top {
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.25);
+  height: 20px;
+}
+
+#googlemaps-container-bottom {
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: inset 0px -3px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px -3px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -3px 3px rgba(0, 0, 0, 0.25);
+  height: 20px;
+  margin-top: -40px;
+  border-bottom: 5px solid #f6f6f6;
+  margin-bottom: 20px;
+}
+
+#googlemaps {
+  position: relative;
+  z-index: 1;
+  height: 400px;
+  width: 100%;
+  top: -20px;
+}
+
+#small-map-container {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  border: 5px solid #f6f6f6;
+  -webkit-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+  height: 210px;
+  width: 210px;
+  margin-bottom: -215px;
+  a {
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+    position: relative;
+    z-index: 2;
+    height: 210px;
+    width: 210px;
+    display: block;
+  }
+}
+
+#small-map {
+  position: relative;
+  z-index: 1;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  margin-left: 5px;
+}

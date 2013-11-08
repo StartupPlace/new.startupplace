@@ -1,0 +1,93 @@
+html { -webkit-font-smoothing: antialiased; }
+
+.clear {
+        clear:both;
+}
+
+body {
+        font-family: 'Droid Sans';
+        font-size: 14px;
+        color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        font-family: "Droid Sans" !important;
+        font-weight: normal !important;
+        color: #666;
+        margin: 0;
+        padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 26px;
+}
+
+h6 {
+  font-size: 11px;
+  line-height: 24px;
+}
+
+hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  &.separation {
+    border-top: 1px solid #eeeeee;
+    &.menu-item {
+      margin: 1px 0;
+    }
+  }
+}
+
+.title {
+  border-bottom: 3px double #f6f6f6;
+  margin-bottom: 10px;
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: 5px solid #29a9df !important;
+    margin-bottom: -4px !important;
+    display: inline-block !important;
+    padding: 0px 10px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+}
+
+ul, ol {
+  margin: 0;
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 30px;
+}
+
+
+#wrapper {
+  background: #fff;
+}

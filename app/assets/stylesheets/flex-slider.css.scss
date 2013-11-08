@@ -1,0 +1,219 @@
+
+/* Browser Resets
+=================================================================== */
+
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+  outline: none;
+}
+
+.slides, .flex-control-nav, .flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Necessary Styles
+=================================================================== */
+
+.flexslider {
+  margin: 0;
+  padding: 0;
+  .slides {
+    > li {
+      position: relative;
+      zoom: 1;
+      display: none;
+      -webkit-backface-visibility: hidden;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+
+.flexslider {
+  position: relative;
+  zoom: 1;
+  z-index: 50;
+}
+
+/* Clearfix for the .slides element */
+
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .slides {
+  display: block;
+}
+
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* Default Styles
+=================================================================== */
+
+.flexslider {
+  background: #fff;
+  zoom: 1;
+}
+
+.ie7 .flexslider {
+  margin-bottom: -30px;
+}
+
+.flex-viewport {
+  max-height: 2000px;
+}
+
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* Direction Nav
+=================================================================== */
+
+.flex-direction-nav {
+  a {
+    width: 35px;
+    height: 35px;
+    display: block;
+    background-color: #555;
+    top: 20px;
+    right: 20px;
+    float: none;
+    position: absolute;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: rgba(0, 0, 0, 0.65);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b3000000',GradientType=0 );
+    /* IE6-8 */
+    *bottom: 50px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .flex-next {
+    background-image: url(slider-control-right.png);
+    background-repeat: no-repeat;
+    background-position: 52% 50%;
+  }
+  .flex-prev {
+    margin-right: 36px;
+    background-image: url(slider-control-left.png);
+    background-repeat: no-repeat;
+    background-position: 48% 50%;
+    &:hover {
+      background-color: #29a9df;
+      opacity: 1;
+    }
+  }
+  .flex-next:hover {
+    background-color: #29a9df;
+    opacity: 1;
+  }
+}
+
+.subpage .flex-direction-nav a {
+  bottom: 0px;
+  right: 0px;
+  *bottom: 30px;
+}
+
+/* Control Nav
+=================================================================== */
+
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  li {
+    margin: 0 3px 0 0;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+.flex-control-paging li a {
+  width: 14px;
+  height: 14px;
+  display: block;
+  background: #c8c8c8;
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  &:hover {
+    background: #505050;
+  }
+  &.flex-active {
+    background: #505050;
+    cursor: default;
+  }
+}
+
+/* Caption
+=================================================================== */
+
+.slide-caption {
+  width: auto;
+  max-width: 30%;
+  padding: 10px 20px;
+  margin: 0 0 0px 0px;
+  position: absolute;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b3000000',GradientType=0 );
+  /* IE6-8 */
+  &.n {
+    background: rgba(0, 0, 0, 0.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000000', endColorstr='#b3000000',GradientType=0 );
+    /* IE6-8 */
+  }
+  h3 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    line-height: 33px;
+  }
+  p {
+    margin: 0;
+    line-height: 19px;
+    color: #bbb;
+  }
+}

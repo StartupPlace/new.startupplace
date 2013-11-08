@@ -14,4 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+
+//= require flexslider.min
+//= require jquery.cslider
+//= require slider
+
 //= require_tree .
+
+$(document).on('ready', function(){
+	
+	$('#flex1').flexslider();
+
+	$('#footer-menu-back-to-top a').click(function(){
+        jQuery('html, body').animate({scrollTop:0}, 300); 
+        return false; 
+    });
+
+	$('.picture a').hover(function () {
+            $(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 1);
+    },function () {
+            $(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 0);
+    });
+
+});

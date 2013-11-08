@@ -1,0 +1,126 @@
+
+header {
+  background: #fff;
+  border-bottom: 5px solid #f6f6f6;
+}
+
+.brand {
+  color: #ddd !important;
+  text-decoration: none !important;
+  font-size: 28px !important;
+  margin-left: 10px;
+  text-shadow: none !important;
+  margin-top: 10px;
+  padding: 0px 10px 5px !important;
+  i {
+    margin-top: -10px;
+    margin-right: 10px;
+  }
+  span {
+    color: #29a9df;
+  }
+}
+
+#social-links {
+  margin-top: 20px;
+  float: right;
+}
+
+.nav-collapse.collapse {
+  height: auto \9 !important;
+  overflow: visible \9 !important;
+}
+
+.navbar, .navbar-inner, .nav, .navbar-inverse {
+  background: #fff !important;
+  filter: none !important;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0;
+}
+
+.navbar-inner {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.navbar .nav {
+  > {
+    li > a {
+      color: #666;
+      border-top: 4px solid #fff;
+      text-shadow: none;
+      font-size: 16px;
+      padding: 25px;
+      padding: 22px 15px \9;
+      &:focus, &:hover {
+        border-top: 4px solid #29a9df !important;
+        background: #29a9df !important;
+        color: #fff;
+      }
+    }
+    .active > a {
+      color: #29a9df !important;
+      text-decoration: none;
+      border-top: 4px solid #29a9df !important;
+      background-color: #fff !important;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      &:focus {
+        color: #29a9df !important;
+        text-decoration: none;
+        border-top: 4px solid #29a9df !important;
+        background-color: #fff !important;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+      &:hover {
+        border-top: 4px solid #29a9df !important;
+        background: #29a9df !important;
+        color: #fff !important;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .active a:hover > .caret {
+    border-top-color: #fff !important;
+    border-bottom-color: #fff !important;
+  }
+}
+
+.dropdown-menu li > a {
+  &:hover, &:focus {
+    color: #ffffff;
+    background: #29a9df !important;
+  }
+}
+
+.dropdown-submenu:hover > a {
+  color: #ffffff;
+  background: #29a9df !important;
+}
+
+.dropdown-menu .active > a {
+  color: #ffffff !important;
+  background: #29a9df !important;
+  &:hover {
+    color: #ffffff !important;
+    background: #29a9df !important;
+  }
+}
+
+.navbar .btn-navbar {
+  margin-top: 15px;
+}
+
+.nav .active .dropdown-toggle .caret {
+  border-top-color: #29a9df !important;
+  border-bottom-color: #29a9df !important;
+}
