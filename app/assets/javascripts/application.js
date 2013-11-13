@@ -18,6 +18,7 @@
 //= require flexslider.min
 //= require jquery.cslider
 //= require slider
+//= require fancybox
 
 //= require_tree .
 
@@ -34,6 +35,15 @@ $(document).on('ready', function(){
             $(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 1);
     },function () {
             $(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 0);
+    });
+
+    $(".meter > span").each(function() {
+        $(this)
+        .data("origWidth", $(this).width())
+        .width(0)
+        .animate({
+            width: $(this).data("origWidth")
+        }, 1200);
     });
 
 });

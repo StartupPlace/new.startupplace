@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title><%= yield(:title) %></title>
-	  <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
-	  <link type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" media="screen">
-	  <link type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" media="screen">
-	  <link type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" media="screen">
-	  <link type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic" rel="stylesheet" media="screen">
-	  <%= csrf_meta_tags %>
-	  <%= render 'layouts/shim' %>
+		<title><%= yield(:title) %></title>
+		<%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
+		<link type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" media="screen">
+		<link type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" media="screen">
+		<link type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet" media="screen">
+		<link type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic" rel="stylesheet" media="screen">
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
 	</head>
 	<body>
+		<%= render 'layouts/header' %>
+		<%= yield %>
+		<%= render 'layouts/footer' %>
 
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-	<%= render 'layouts/header' %>
-	<%= yield %>
-	<%= render 'layouts/footer' %>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-38384370-1']);
+			_gaq.push(['_trackPageview']);
 
-	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-38384370-1']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-</body>
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
 </html>
