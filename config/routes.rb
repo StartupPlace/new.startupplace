@@ -1,5 +1,7 @@
 Startupplace::Application.routes.draw do
 
+  resources :posts
+
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
