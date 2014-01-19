@@ -1,11 +1,18 @@
 Startupplace::Application.routes.draw do
 
+  get "news/index"
   resources :posts
 
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
   get 'contact' => 'static_pages#contact'
+
+  namespace :dashboard do
+    resources :news
+  end
+
+  # resources :news, :only => [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

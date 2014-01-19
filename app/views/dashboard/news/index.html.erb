@@ -1,0 +1,12 @@
+ <h1>All news</h1>
+ <ul>
+ 	<% if @news.each do |news| %>
+ 		<li>
+ 			<%= link_to news.title, dashboard_news_path(news), class: 'newsItem', id: 'news_#{news_id}' %>
+ 		</li>
+ 	<% end.empty? %>
+ 		<p>Sin resultados :(</p>
+ 	<% end %>
+ </ul>
+
+ <%= link_to "create new news", new_dashboard_news_path, class: 'newNews' %>
