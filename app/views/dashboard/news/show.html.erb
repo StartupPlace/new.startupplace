@@ -1,6 +1,9 @@
 <h1><%= @news.title %></h1>
 
 <p><%= @news.body %></p>
+
+<p><%= link_to 'edit', edit_dashboard_news_path(@news) %></p>
+<p><%= link_to 'delete', dashboard_news_path(@news), method: :delete, data: {confirm: "Really delete this news?"} %></p>
 <br/>
 
 <%= link_to "<< Back to news list", dashboard_news_index_path %>

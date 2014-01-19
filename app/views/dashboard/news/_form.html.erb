@@ -1,0 +1,18 @@
+<%= form_for @news, url: url_into do |f| %>
+	<ul>
+		<% @news.errors.full_messages.each do |error| %>
+			<i><%=error%></i>
+		<% end %>
+	</ul>
+	<p>
+		<%= f.label :title %><br/>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :body %><br/>
+		<%= f.text_field :body %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
