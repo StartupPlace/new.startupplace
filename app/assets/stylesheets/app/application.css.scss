@@ -8,19 +8,19 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap_and_overrides
+ *= require app/bootstrap_and_overrides
  *= require icons
  *= require social-icons
  *= require_self
  */
 
-@import "reset-app";
-@import "header";
-@import "footer";
-@import "social";
-@import "blog";
-@import "flex-slider";
-@import "responsive";
+@import "app/reset-app";
+@import "app/header";
+@import "app/footer";
+@import "app/social";
+@import "app/blog";
+@import "app/flex-slider";
+@import "app/responsive";
 
 
 /* News */
@@ -131,11 +131,11 @@ div.newsletter div.item-description {
 }
 
 .image-overlay-link {
-  background-image: url(overlay-icon-01.png);
+  background-image: url("../overlay-icon-01.png");
 }
 
 .image-overlay-zoom {
-  background-image: url(overlay-icon-02.png);
+  background-image: url("../overlay-icon-02.png");
 }
 
 .flex-video {
@@ -222,12 +222,12 @@ div.newsletter div.item-description {
 }
 
 .ico-color {
-  background-image: url("../img/icons/blue/glyphicons.png");
+  background-image: url("../icons/blue/glyphicons.png");
   opacity: 1;
 }
 
 .mini-color {
-  background-image: url("../img/icons/blue/glyphicons-mini.png");
+  background-image: url("../icons/blue/glyphicons-mini.png");
   opacity: 1;
 }
 
@@ -398,7 +398,7 @@ div.newsletter div.item-description {
 }
 
 #page-title {
-  background: url(bg/slider.jpg);
+  background: url(../bg/slider.jpg);
   display: block;
   margin-bottom: 25px;
   position: relative;
