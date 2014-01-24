@@ -1,0 +1,133 @@
+
+
+.home-entry {
+  h2 {
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 17px;
+    margin: 10px 35px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .picture {
+    border: 1px solid #ccc;
+    vertical-align: baseline;
+    border-radius: 50% / 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 5px 10px;
+    clip: rect(12px, auto, 24px, 0);
+  }
+}
+
+div.newsletter div.item-description {
+  padding-top: 10px;
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.picture {
+  position: relative;
+  border: 1px solid #ccc;
+  .item-description {
+    padding: 5px 15px;
+    border: none;
+    margin: 0px;
+  }
+}
+
+.post {
+	padding: 0 0 15px 0;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 10px;
+	&.post-page {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+  	.post-description {
+		ul { margin-left: 15px; }
+		ol { margin-left: 38px; }
+		ul li {
+			background: url("../icons/list/blue/list_plus.png") no-repeat 0 5px;
+			padding: 0 0 0 18px;
+		}
+	}
+	.picture {
+		margin-bottom: 0px;
+		padding: 5px;
+		border: none;
+		margin: 0px;
+	}
+}
+
+.post-content {
+  margin: 22px 0 0 0px;
+  .post-title {
+    padding-bottom: 15px;
+    h1 {
+      font-size: 40px;
+    }
+  }
+}
+
+.post .picture, #portfolio-wrapper .picture {
+	position: relative;
+	background: #fff;
+	padding: 3px;
+	border: 1px solid #fcfcfc;
+	-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);			
+}
+
+.post-icon {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-top: 30px;
+}
+
+
+.post-meta {
+  background: #fff;
+  color: #666;
+  margin: 5px 0px;
+  padding: 10px 5px;
+  border-top: 1px solid #eee;
+  a {
+    text-decoration: none;
+    &:hover! {}
+  }
+  i {
+    opacity: 0.35;
+    filter: alpha(opacity = 35);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+    margin-right: 5px;
+    zoom: 1;
+  }
+  span {
+    margin-right: 10px;
+  }
+}
+
+.post .program {
+  .row {
+    margin-left: -10px;
+  }
+  .span3 {
+    height: 202px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}
+
+.post-page {
+  .tab-content {
+    padding: 20px 0;
+  }
+  .nav-tabs {
+    border-bottom: 1px solid #ddd !important;
+  }
+}

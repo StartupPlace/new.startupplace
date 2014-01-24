@@ -1,0 +1,74 @@
+
+ul {
+  &.square, &.circle, &.disc {
+    margin-left: 30px;
+  }
+  &.square {
+    list-style: square outside;
+  }
+  &.circle {
+    list-style: circle outside;
+  }
+  &.disc {
+    list-style: disc outside;
+  }
+  ul!, ol! {}
+}
+
+ol {
+  ol!, ul! {}
+}
+
+ul {
+  ul! li, ol! li {}
+}
+
+ol {
+  ol! li, ul! li {}
+}
+
+
+.check_list li, .plus_list li, .minus_list li, .star_list li, .arrow_list li, .square_list li, .circle_list li, .cross_list li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.check_list li {
+  background: url(../icons/list/blue/list_check.png) no-repeat 0% 50%;
+  padding: 0 0 0 18px;
+}
+
+.plus_list li {
+  background: url(../icons/list/blue/list_plus.png) no-repeat 0% 50%;
+  padding: 0 0 0 18px;
+}
+
+.minus_list li {
+  background: url(../icons/list/blue/list_minus.png) no-repeat 0% 50%;
+  padding: 0 0 0 18px;
+}
+
+.star_list li {
+  background: url(../icons/list/blue/list_star.png) no-repeat 0% 50%;
+  padding: 0 0 0 16px;
+}
+
+.arrow_list li {
+  background: url(../icons/list/blue/list_arrow.png) no-repeat 0% 50%;
+  padding: 0 0 0 16px;
+}
+
+.square_list li {
+  background: url(../icons/list/blue/list_square.png) no-repeat 0% 50%;
+  padding: 0 0 0 16px;
+}
+
+.circle_list li {
+  background: url(../icons/list/blue/list_circle.png) no-repeat 0% 50%;
+  padding: 0 0 0 16px;
+}
+
+.cross_list li {
+  background: url(../icons/list/blue/list_cross.png) no-repeat 0% 50%;
+  padding: 0 0 0 16px;
+}

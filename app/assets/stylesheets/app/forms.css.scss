@@ -1,0 +1,126 @@
+
+/* Newsletter Form
+====================================================================== */
+
+form#newsletter {
+  color: #999999;
+  margin-left: 10px;
+  p {
+    margin: 0px 0px -10px 0px;
+  }
+  label {
+    font-size: 16px;
+    width: 20px;
+    display: block;
+    position: relative;
+    left: 8px;
+    top: 33px;
+    z-index: 2;
+  }
+  input {
+    &[type=text] {
+      background: #fff;
+      width: 75%;
+      float: left;
+      border: 1px solid #f6f6f6;
+      position: relative;
+      z-index: 1;
+      padding: 7px 0px 8px 34px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      -webkit-border-top-left-radius: 3px;
+      -moz-border-radius-topleft: 3px;
+      border-top-left-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &[type=submit] {
+      background: #29a9df;
+      color: #fff;
+      width: 25%;
+      float: left;
+      border: 1px solid #f6f6f6;
+      position: relative;
+      z-index: 2;
+      font-size: 14px;
+      padding: 7px 0px 8px 0px;
+      margin-top: 0px;
+      margin-left: -42px;
+      -webkit-border-top-right-radius: 3px;
+      -moz-border-radius-topright: 3px;
+      border-top-right-radius: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      -moz-border-radius-bottomright: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}
+
+
+/* Contact Form
+=================================================================== */
+
+.field {
+  textarea {
+    max-width: 97%;
+    min-width: 97%;
+    height: 130px;
+    margin: 5px 0 15px 0;
+  }
+  input {
+    width: 240px;
+    margin-bottom: 15px;
+  }
+  &:focus {
+    border: 1px solid #eee;
+  }
+  label span {
+    color: #666;
+  }
+  .validation-error {
+    border: 1px solid #f2c4c2;
+    background: #ffeceb;
+    &:focus {
+      border: 1px solid #f2c4c2;
+      background: #ffeceb;
+    }
+  }
+}
+
+.loading {
+  background: url(../images/loader.gif) no-repeat 1px;
+  height: 28px;
+  width: 28px;
+  float: left;
+  margin: 5px 0 0 10px;
+  display: none;
+}
+
+.success-message {
+  .notification {
+    margin-bottom: 20px;
+  }
+  display: none;
+}
+
+.form-spacer {
+  margin-top: 20px;
+}
+
+div#contact-form button[type="submit"] {
+  background: #29A9DF;
+  color: white;
+  border: 1px solid #F6F6F6;
+  position: relative;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin-top: 0px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-right-radius: 3px;
+}

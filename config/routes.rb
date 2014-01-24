@@ -9,7 +9,7 @@ Startupplace::Application.routes.draw do
     resources :news
   end
 
-  # resources :news, :only => [:index, :show]
+  resources :news, :only => [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

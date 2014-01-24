@@ -1,0 +1,31 @@
+
+/* Links List
+=================================================================== */
+
+.links-list li a {
+  color: #a4a4a4;
+  display: block;
+  padding: 3px 0;
+  padding-left: 12px;
+  background: url(../links-list-arrow-01.png) no-repeat left 47%;
+}
+
+.links-list-alt li a {
+  color: #666;
+  display: block;
+  padding: 3px 0;
+  padding-left: 12px;
+  background: url(../links-list-arrow-02.png) no-repeat left 47%;
+}
+
+.links-list li a:hover {
+  color: #efe9d8;
+}
+
+.links-list-alt li a:hover {
+  color: #888;
+}
+
+.links-list li:first-child a, .links-list-alt li:first-child a {
+  margin: -3px 0 0 0;
+}
