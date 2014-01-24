@@ -15,7 +15,7 @@
     	<div class="container">
 			<!--start: Row -->
 			<div class="row">
-				<div class="span8 offset2">
+				<div class="span9">
 					<% if @news.each do |news| %>
 						<!-- start: Post -->
 						<div class="post">
@@ -24,14 +24,16 @@
 							</div>
 							<span class="post-icon standard"><i class="ico-pen circle"></i></span>
 							<div class="post-content">
-								<div class="post-title"><h2><a href="#"><%= news.title  %></a></h2></div>
+								<div class="post-title">
+									<h2><%= link_to news.title, news_path(news), id: 'news_#{news.id}' %></h2>
+								</div>
 								<div class="post-description">
 									<p>
 										<%= news.body %>
 									</p>
 								</div>
 								<div class="post-meta">
-									<span><i class="mini-ico-calendar"></i><%= news.created_at%></span> 
+									<span><i class="mini-ico-calendar"></i><%= news.created_at %></span> 
 									<span>
 										<i class="mini-ico-user"></i>
 										By <a href="#">user</a>
