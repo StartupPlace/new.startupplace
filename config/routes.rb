@@ -3,7 +3,6 @@ Startupplace::Application.routes.draw do
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
-  get 'contact' => 'static_pages#contact'
 
   namespace :dashboard do
     resources :news

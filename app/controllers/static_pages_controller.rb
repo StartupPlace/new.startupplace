@@ -8,6 +8,4 @@ class StaticPagesController < ApplicationController
   def ideastartup
   end
 
-  def contact
-  end
 end
