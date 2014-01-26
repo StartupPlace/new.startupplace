@@ -2,6 +2,13 @@
 
 <p><%= @news.body %></p>
 
+<p>
+  Tags:
+  <% @news.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
+
 <p><%= link_to 'edit', edit_dashboard_news_path(@news) %></p>
 <p><%= link_to 'delete', dashboard_news_path(@news), method: :delete, data: {confirm: "Really delete this news?"} %></p>
 <br/>
