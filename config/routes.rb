@@ -10,7 +10,7 @@ Startupplace::Application.routes.draw do
 
   resources :news, :only => [:index, :show]
 
-  resources :tags
+  resources :tags, :only => [:show, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

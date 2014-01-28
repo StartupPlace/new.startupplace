@@ -1,53 +1,67 @@
-	<!-- start: Page Title -->
-	<div id="page-title">
-		<div id="page-title-inner">
-			<!-- start: Container -->
-			<div class="container">
-				<h2><i class="ico-pencil ico-white"></i>News</h2>
-			</div><!-- end: Container  -->
-		</div>	
-	</div>
-	<!-- end: Page Title -->
-				
-	<!--start: Wrapper-->
-	<div id="wrapper">
-		<!--start: Container -->
-    	<div class="container">
-			<!--start: Row -->
-			<div class="row">
-				<div class="span9">
-					<% if @news.each do |news| %>
-						<!-- start: Post -->
-						<div class="post">
-							<div class="post-img picture">
-							<%= image_tag("fakecover.jpg", alt: 'fakecover') %>
+<!-- start: Page Title -->
+<div id="page-title">
+	<div id="page-title-inner">
+		<!-- start: Container -->
+		<div class="container">
+			<h2><i class="ico-pencil ico-white"></i>News</h2>
+		</div><!-- end: Container  -->
+	</div>	
+</div>
+<!-- end: Page Title -->
+			
+<!--start: Wrapper-->
+<div id="wrapper">
+	<!--start: Container -->
+ 	<div class="container">
+		<!--start: Row -->
+		<div class="row">
+			<div class="span9">
+				<% if @news.each do |news| %>
+					<!-- start: Post -->
+					<div class="post">
+						<div class="post-img picture">
+						<%= image_tag("fakecover.jpg", alt: 'fakecover') %>
+						</div>
+						<span class="post-icon standard"><i class="ico-pen circle"></i></span>
+						<div class="post-content">
+							<div class="post-title">
+								<h2><%= link_to news.title, news_path(news), id: 'news_#{news.id}' %></h2>
 							</div>
-							<span class="post-icon standard"><i class="ico-pen circle"></i></span>
-							<div class="post-content">
-								<div class="post-title">
-									<h2><%= link_to news.title, news_path(news), id: 'news_#{news.id}' %></h2>
-								</div>
-								<div class="post-description">
-									<p>
-										<%= news.body %>
-									</p>
-								</div>
-								<div class="post-meta">
-									<span><i class="mini-ico-calendar"></i><%= news.created_at %></span> 
-									<span>
-										<i class="mini-ico-user"></i>
-										By <a href="#">user</a>
-									</span> 
-								</div>
+							<div class="post-description">
+								<p>
+									<%= news.body %>
+								</p>
 							</div>
-						</div><!-- end: Post -->
-					<% end.empty? %>
- 						<p>Sin noticias por el momento :(</p>
-					<% end %>
-				</div>
+							<div class="post-meta">
+								<span><i class="mini-ico-calendar"></i><%= news.created_at %></span> 
+								<span>
+									<i class="mini-ico-user"></i>
+									By <a href="#">user</a>
+								</span> 
+							</div>
+						</div>
+					</div><!-- end: Post -->
+				<% end.empty? %>
+						<p>Sin noticias por el momento :(</p>
+				<% end %>
 			</div>
+			<!-- start: Sidebar -->
+			<div class="span3 hidden-phone">
+				<!-- start: Tags -->
+				<div class="widget">
+					<div class="title"><h3>Tags</h3></div>
+					<div class="tags">
+						<% @tags.each do |tag| %>
+							<%= link_to tag.name, tag_path(tag) %>
+						<% end %>
+					</div>
+				</div><!-- end: Tags -->
+			</div><!-- end: Sidebar -->
 		</div>
-		<!--end: Container-->
-	
+	</div><!--end: Container-->
+		</div>
 	</div>
-	<!-- end: Wrapper  -->	
+	<!--end: Container-->
+
+</div>
+<!-- end: Wrapper  -->	
