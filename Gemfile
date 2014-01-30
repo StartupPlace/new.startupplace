@@ -27,6 +27,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+group :development, :test do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -36,7 +44,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -46,3 +54,6 @@ end
 
 # Use boostrap as css framework
 gem 'bootstrap-sass', '2.3.2.0'
+
+# Use paperclip to manage images
+gem 'paperclip'

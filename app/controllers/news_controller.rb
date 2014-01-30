@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  
   def index
   	@tags = Tag.all
   	@news = News.all
@@ -7,4 +8,5 @@ class NewsController < ApplicationController
   def show
   	@news = News.find(params['id'])
   end
+  
 end
