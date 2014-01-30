@@ -1,6 +1,7 @@
 class News < ActiveRecord::Base
 	has_many :taggings
 	has_many :tags, through: :taggings
+	has_attached_file :image, styles: { medium: "600x300>", thumb: "240x120>" }
 
 	def tag_list
 	  tags.join(", ")

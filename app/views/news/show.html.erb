@@ -20,7 +20,7 @@
 				<!-- start: Post -->
 				<div class="post post-page">
 					<div class="post-img picture">
-						<%= image_tag("fakecover.jpg", alt: 'fakecover') %>
+						<%= image_tag @news.image.url(:medium)%>
 					</div>
 					<div class="post-content">
 						<div class="post-description">

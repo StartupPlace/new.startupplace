@@ -1,5 +1,7 @@
 <h1><%= @news.title %></h1>
 
+<p><%= image_tag @news.image.url(:thumb)%></p>
+
 <p><%= @news.body %></p>
 
 <p>
