@@ -4,7 +4,6 @@
 		<!-- start: Container -->
 		<div class="container">
 			<h2><i class="ico-pencil ico-white"></i>News Tagged with <%= @tag.name %></h2>
-			<%= link_to 'Delete this tag', tag_path(@tag), method: :delete, data:{confirm: 'Really do you want to delete this tag?'} %>
 		</div><!-- end: Container  -->
 	</div>	
 </div><!-- end: Page Title -->
@@ -20,7 +19,7 @@
 					<!-- start: Post -->
 					<div class="post">
 						<div class="post-img picture">
-						<%= image_tag("fakecover.jpg", alt: 'fakecover') %>
+							<%= image_tag news.image.url(:medium)%>
 						</div>
 						<span class="post-icon standard"><i class="ico-pen circle"></i></span>
 						<div class="post-content">
