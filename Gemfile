@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+
+gem 'pg' # Use postgres as the databases for AR on all envs
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,7 +34,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'pg'
+
 end
 
 group :doc do
