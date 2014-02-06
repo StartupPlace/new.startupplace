@@ -16,4 +16,5 @@
 /tmp
 
 # Ignore images uploaded
-/public/system/news/images
+/public/system
+/public/ckeditor_assets

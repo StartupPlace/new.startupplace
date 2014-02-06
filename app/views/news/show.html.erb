@@ -3,7 +3,7 @@
 	<div id="page-title-inner">
 		<!-- start: Container -->
 		<div class="container">
-			<h2><i class="ico-pencil ico-white"></i><%= @news.title  %></h2>
+			<h2><i class="ico-pencil ico-white"></i><%= @news.title.html_safe  %></h2>
 		</div>
 		<!-- end: Container  -->
 	</div>	
@@ -25,7 +25,7 @@
 					<div class="post-content">
 						<div class="post-description">
 							<p>
-								<%= @news.body %>
+								<%= @news.body.html_safe %>
 							</p>
 						</div>
 						<div class="post-meta">

@@ -1,8 +1,8 @@
-<h1><%= @news.title %></h1>
+<h1><%= @news.title.html_safe %></h1>
 
 <p><%= image_tag @news.image.url(:thumb)%></p>
 
-<p><%= @news.body %></p>
+<p><%= @news.body.html_safe %></p>
 
 <p>
   Tags:

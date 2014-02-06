@@ -1,5 +1,6 @@
 Startupplace::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
