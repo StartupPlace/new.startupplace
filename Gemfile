@@ -62,3 +62,5 @@ gem 'paperclip'
 
 # Use CKeditor
 gem "ckeditor"
+
+gem 'friendly_id', '~> 5.0.0'

@@ -8,7 +8,7 @@ class Dashboard::NewsController < ApplicationController
 	end
 
 	def show
-		@news = News.find(params[:id])
+		@news = News.friendly.find(params[:id])
 	end
 
 	def new
@@ -29,11 +29,11 @@ class Dashboard::NewsController < ApplicationController
 	end
 
 	def edit
-		@news = News.find(params[:id])
+		@news = News.friendly.find(params[:id])
 	end
 
 	def update
-		@news = News.find(params[:id])
+		@news = News.friendly.find(params[:id])
 		@news.update(news_params)
 
 		flash.notice = 'News #{news.title} Updated!'
