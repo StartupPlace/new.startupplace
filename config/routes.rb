@@ -1,6 +1,5 @@
 Startupplace::Application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor'
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
@@ -12,6 +11,10 @@ Startupplace::Application.routes.draw do
   resources :news, :only => [:index, :show]
 
   resources :tags, :only => [:show]
+
+  mount Ckeditor::Engine => '/ckeditor'
+  
+  devise_for :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

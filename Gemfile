@@ -60,7 +60,11 @@ gem 'bootstrap-sass', '2.3.2.0'
 # Use paperclip to manage images
 gem 'paperclip'
 
-# Use CKeditor
+# Redactor tool for publishers
 gem "ckeditor"
 
+# Slugging and permalink plugins for ActiveRecord
 gem 'friendly_id', '~> 5.0.0'
+
+# Authentication & Authorization
+gem 'devise', '3.2.2'
