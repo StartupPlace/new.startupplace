@@ -60,6 +60,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 # Use paperclip to manage images
 gem 'paperclip'
 
+# Use S3 AWS to store upload images
+gem 'aws-sdk'
+
 # Redactor tool for publishers
 gem "ckeditor"
 
