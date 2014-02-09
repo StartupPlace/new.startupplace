@@ -68,3 +68,6 @@ gem 'friendly_id', '~> 5.0.0'
 
 # Authentication & Authorization
 gem 'devise', '3.2.2'
+
+# This gem will also configure your app to serve assets in production on heroku
+gem 'rails_12factor', group: :production
