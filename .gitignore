@@ -18,3 +18,4 @@
 # Ignore images uploaded
 /public/system
 /public/ckeditor_assets
+/public/assets

@@ -58,7 +58,7 @@ gem 'unicorn'
 gem 'bootstrap-sass', '2.3.2.0'
 
 # Use paperclip to manage images
-gem 'paperclip'
+gem 'paperclip', '3.5.2'
 
 # Use S3 AWS to store upload images
 gem 'aws-sdk'

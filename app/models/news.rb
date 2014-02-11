@@ -5,7 +5,7 @@ class News < ActiveRecord::Base
 
 	has_many :taggings
 	has_many :tags, through: :taggings
-	has_attached_file :image, styles: { medium: "600x300>", thumb: "240x120>" }
+	has_attached_file :image, styles: { medium: "700x350>", thumb: "300x150>", square: "100x50"}
 
 	# Validate the attached image is image/jpg, image/png, etc
   	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
