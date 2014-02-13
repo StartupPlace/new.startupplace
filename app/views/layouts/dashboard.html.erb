@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dashboard - StartupPlace</title>
-  <%= stylesheet_link_tag    "dashboard/dashboard", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div id="account">
-	  <% if current_user %>
-	    <span>Welcome, <%= current_user.email %></span>
-	    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-	  <% else %>
-	    <%= link_to "Sign in", new_user_session_path %>
-	  <% end %>
-	</div>
-	<%= yield %>
-	<p class="flash"><%= flash.notice %></p>
-</body>
+	<head>
+	  <title>Dashboard - StartupPlace</title>
+	  <%= stylesheet_link_tag "sudo", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="account">
+		  <% if current_user %>
+		    <span>Welcome, <%= current_user.email %></span>
+		    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+		  <% else %>
+		    <%= link_to "Sign in", new_user_session_path %>
+		  <% end %>
+		</div>
+		<%= yield %>
+		<p class="flash"><%= flash.notice %></p>
+	</body>
 </html>

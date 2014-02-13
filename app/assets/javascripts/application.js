@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-migrate-min
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
@@ -20,12 +21,13 @@
 //= require slider
 //= require fancybox
 
+//= require ckeditor/override
 //= require ckeditor/init
 
 //= require_tree .
 
 $(document).on('ready', function(){
-	
+
 	$('#flex1').flexslider();
 
 	$('#footer-menu-back-to-top a').click(function(){

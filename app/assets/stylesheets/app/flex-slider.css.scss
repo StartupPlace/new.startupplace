@@ -123,13 +123,13 @@ html[xmlns] .slides {
     transition: all 0.1s ease-in-out;
   }
   .flex-next {
-    background-image: url("../slider-control-right.png");
+    background-image: image-url("slider-control-right.png");
     background-repeat: no-repeat;
     background-position: 52% 50%;
   }
   .flex-prev {
     margin-right: 36px;
-    background-image: url("../slider-control-left.png");
+    background-image: image-url("slider-control-left.png");
     background-repeat: no-repeat;
     background-position: 48% 50%;
     &:hover {

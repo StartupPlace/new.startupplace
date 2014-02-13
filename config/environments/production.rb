@@ -29,6 +29,9 @@ Startupplace::Application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+  # since i changed the name of application.css.scss then ...
+  config.assets.precompile += %w( app.css sudo.css )
+
   # Generate digests for assets URLs.
   config.assets.digest = true
 
@@ -67,7 +70,7 @@ Startupplace::Application.configure do
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
-  config.i18n.fallbacks = true
+  config.i18n.fallbacks = false
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify

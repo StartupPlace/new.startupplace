@@ -4,7 +4,7 @@
 
 #footer-menu {
   height: 50px;
-  background: #fcfcfc url("../bg-k20.png") repeat;
+  background: #fcfcfc image-url("bg-k20.png") repeat;
   border-top: 4px solid #f6f6f6;
   border-bottom: 4px solid #f6f6f6;
   margin-top: 20px;
@@ -16,7 +16,7 @@
     margin: 5px;
     height: 36px;
     width: 36px;
-    background: #fcfcfc url("../chart.png");
+    background: #fcfcfc image-url("chart.png");
     background-repeat: no-repeat;
     background-position: 48%;
     opacity: .1;
@@ -109,7 +109,7 @@
     height: 30px;
     display: block;
     background-color: #29a9df;
-    background-image: url("../scroll-top-top.png");
+    background-image: image-url("scroll-top-top.png");
     background-repeat: no-repeat;
     background-position: 50%;
     -webkit-transition: all 0.1s ease-in-out;
@@ -124,7 +124,7 @@
 }
 
 #footer {
-  background: url(bg-k10.png) repeat;
+  background: image-url("bg-k10.png") repeat;
   border-bottom: 4px solid #f6f6f6;
   color: #666 !important;
   padding: 40px 0px;

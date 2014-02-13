@@ -96,11 +96,11 @@
 }
 
 .image-overlay-link {
-  background-image: url("../overlay-icon-01.png");
+  background-image: image-url("overlay-icon-01.png");
 }
 
 .image-overlay-zoom {
-  background-image: url("../overlay-icon-02.png");
+  background-image: image-url("overlay-icon-02.png");
 }
 
 .flex-video {
@@ -187,12 +187,12 @@
 }
 
 .ico-color {
-  background-image: url("../icons/blue/glyphicons.png");
+  background-image: image-url("icons/blue/glyphicons.png");
   opacity: 1;
 }
 
 .mini-color {
-  background-image: url("../icons/blue/glyphicons-mini.png");
+  background-image: image-url("icons/blue/glyphicons-mini.png");
   opacity: 1;
 }
 
@@ -363,7 +363,7 @@
 }
 
 #page-title {
-  background: url(../bg/slider.jpg);
+  background: image-url("bg/slider.jpg");
   display: block;
   margin-bottom: 25px;
   position: relative;
