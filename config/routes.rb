@@ -3,8 +3,10 @@ Startupplace::Application.routes.draw do
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
+  get 'dashboard' => 'dashboard#index'
 
   namespace :dashboard do
+    get '/' => 'dashboard#index'
     resources :news
   end
 

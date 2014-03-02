@@ -1,8 +1,6 @@
-class Dashboard::NewsController < ApplicationController
+class Dashboard::NewsController < DashboardController
 	include Dashboard::NewsHelper
 	before_filter :authenticate_user!, :except => [:show, :index]
-
-	layout "dashboard"
 
 	def index
 		@news = News.all
