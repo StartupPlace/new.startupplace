@@ -1,6 +1,6 @@
 class Dashboard::NewsController < ApplicationController
 	include Dashboard::NewsHelper
-	before_filter :authenticate_user!
+	before_filter :authenticate_user!, :except => [:show, :index]
 
 	layout "dashboard"
 
