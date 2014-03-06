@@ -9,4 +9,7 @@
  	<% end %>
  </ul>
 
- <%= link_to "create new news", new_dashboard_news_path, class: 'newNews' %>
+
+<% if can? :create, News %>
+  <%= link_to "create new news", new_dashboard_news_path, class: 'newNews' %>
+<% end %>

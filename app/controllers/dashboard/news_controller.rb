@@ -1,5 +1,8 @@
 class Dashboard::NewsController < DashboardController
 	include Dashboard::NewsHelper
+
+	load_and_authorize_resource :find_by => :slug
+	skip_authorize_resource :only => :show
 	before_filter :authenticate_user!, :except => [:show, :index]
 
 	def index
@@ -39,5 +42,4 @@ class Dashboard::NewsController < DashboardController
 
 		redirect_to dashboard_news_path(@news)
 	end
-
 end

@@ -12,8 +12,13 @@
   <% end %>
 </p>
 
-<p><%= link_to 'edit', edit_dashboard_news_path(@news) %></p>
-<p><%= link_to 'delete', dashboard_news_path(@news), method: :delete, data: {confirm: "Really delete this news?"} %></p>
+
+<% if can? :update, News %>
+  <p><%= link_to 'edit', edit_dashboard_news_path(@news) %></p>
+<% end %>
+<% if can? :destroy, News %>
+  <p><%= link_to 'delete', dashboard_news_path(@news), method: :delete, data: {confirm: "Really delete this news?"} %></p>
+<% end %>
 <br/>
 
 <%= link_to "<< Back to news list", dashboard_news_index_path %>
