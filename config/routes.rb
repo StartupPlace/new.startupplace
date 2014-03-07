@@ -1,28 +1,38 @@
 Startupplace::Application.routes.draw do
 
+  get "users/edit"
+  get "users/update"
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
   get 'dashboard' => 'dashboard#index'
 
   namespace :dashboard do
-    get '/' => 'dashboard#index'
     resources :news
+    resources :users, :only => [:edit, :update]
   end
 
   resources :news, :only => [:index, :show]
-
   resources :tags, :only => [:show]
 
   mount Ckeditor::Engine => '/ckeditor'
   
-  devise_for :users, :skip => [:sessions]
+  devise_for :users, :skip => [:sessions, :registrations]
   as :user do
+    get 'signup' => 'registrations#new', :as => :new_user_registration 
+    post 'signup' => 'registrations#create', :as => :user_registration
+    get 'account/cancel' => 'registrations#cancel', :as => :cancel_user_registration
+    get 'account/edit' => 'registrations#edit', :as => :edit_user_registration
+    put 'signup' => 'registrations#update'
+    delete 'signup' => 'registrations#destroy'
+
     get 'signin' => 'devise/sessions#new', :as => :new_user_session
     post 'signin' => 'devise/sessions#create', :as => :user_session
     match 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session,
       :via => Devise.mappings[:user].sign_out_via
   end
+
+  get 'account/:id', :to => 'accounts#show', :as => :account
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

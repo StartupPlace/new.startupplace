@@ -1,0 +1,28 @@
+<h1>Edit an User</h1>
+
+<%= form_for @user, url: dashboard_user_path, method: :put do |f| %>
+	<ul>
+		<% @user.errors.full_messages.each do |error| %>
+			<i><%=error%></i>
+		<% end %>
+	</ul>
+	
+	<p>
+		<%= f.label :email %>:
+		<%= @user.email %>
+	</p>
+
+	<p>
+		<% for role in User::ROLES %>
+	    <%= check_box_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[roles][]"}%>
+	    <%= label_tag "user_roles_#{role}", role.humanize %><br/>
+	  <% end %>
+	  <%= hidden_field_tag "user[roles][]", "" %>
+	</p>
+	
+	<p>
+		<%= f.submit "Update" %>
+	</p>
+<% end %>
+
+<%= link_to "Back", :back %>

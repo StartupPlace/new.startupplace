@@ -19,15 +19,6 @@
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
 
-  <% for role in User::ROLES %>
-    <%= check_box_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[roles][]"}%>
-    <%= label_tag "user_roles_#{role}", role.humanize %><br/>
-  <% end %>
-  <%= hidden_field_tag "user[roles][]", "" %>
-
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
