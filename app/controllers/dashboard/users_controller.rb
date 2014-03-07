@@ -17,11 +17,7 @@ class Dashboard::UsersController < DashboardController
 		
 		@user.update(user_params)
 
-		if @user.update_attributes(user_params)
-      flash[:notice] = "Successfully updated User."
-      redirect_to edit_dashboard_user_path
-    else
-      render :edit
-    end
+    flash[:notice] = "Successfully updated User."
+		redirect_to edit_dashboard_user_path
   end
 end
