@@ -19,9 +19,11 @@ class Dashboard::NewsController < DashboardController
 
 	def create
 		@news = News.new(news_params)
-		@news.save
-
-		redirect_to dashboard_news_path(@news)
+		if @news.save
+			redirect_to dashboard_news_path(@news)
+		else
+			render :new
+		end
 	end
 
 	def destroy
@@ -36,10 +38,11 @@ class Dashboard::NewsController < DashboardController
 
 	def update
 		@news = News.friendly.find(params[:id])
-		@news.update(news_params)
-
-		flash.notice = 'News #{news.title} Updated!'
-
-		redirect_to dashboard_news_path(@news)
+		if @news.update(news_params)
+			flash.notice = 'News #{news.title} Updated!'
+			redirect_to dashboard_news_path(@news)
+		else
+			render :edit
+		end
 	end
 end

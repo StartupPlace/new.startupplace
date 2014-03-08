@@ -19,9 +19,12 @@
 			<div class="span8 offset2">
 				<!-- start: Post -->
 				<div class="post post-page">
-					<div class="post-img picture">
-						<%= image_tag @news.image.url(:medium)%>
-					</div>
+					<% if @news.image.exists? %>
+						<div class="post-img picture">
+							<%= image_tag @news.image.url(:medium)%>
+						</div>
+					<% end %>
+
 					<div class="post-content">
 						<div class="post-description">
 							<p>

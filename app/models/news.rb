@@ -1,14 +1,23 @@
 class News < ActiveRecord::Base
 	extend FriendlyId
   	
-  	friendly_id :title, use: :slugged
+  friendly_id :title, use: :slugged
 
 	has_many :taggings
 	has_many :tags, through: :taggings
 	has_attached_file :image, styles: { medium: "700x350>", thumb: "300x150>", square: "100x50"}
 
+	validates :title, length: {
+    minimum: 2,
+    maximum: 50,
+    tokenizer: lambda { |str| str.scan(/\w+/) },
+    too_short: "must have at least %{count} words",
+    too_long: "must have at most %{count} words"
+  }
+  validates :body, presence: true
+  validates :tag_list, presence: true
 	# Validate the attached image is image/jpg, image/png, etc
-  	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
 	def tag_list
 	  tags.join(", ")
