@@ -1,3 +1,5 @@
+ <% meta :title => "Ver #{@news.title}" %>
+
 <h1><%= @news.title.html_safe %></h1>
 
 <% if @news.image.exists? %>

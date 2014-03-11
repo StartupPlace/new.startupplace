@@ -1,3 +1,9 @@
+<% meta :title => "#{@news.title}",
+    :description => truncate(strip_tags(@news.body), :length => 500),
+    :keywords => "#{@news.tag_list}",
+    :author => ""
+%>
+
 <!-- start: Page Title -->
 <div id="page-title">
 	<div id="page-title-inner">

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Dashboard - StartupPlace</title>
+		<%= render 'shared/meta_tags' %>
 	  <%= stylesheet_link_tag "sudo", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-	  <%= csrf_meta_tags %>
+	  <%= favicon_link_tag 'ico/favicon.ico', type: 'image/x-icon' %>
+		<%= csrf_meta_tags %>
+		<%= render 'layouts/shim' %>
 	</head>
 	<body>
 		<div id="account">
