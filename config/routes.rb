@@ -32,7 +32,7 @@ Startupplace::Application.routes.draw do
       :via => Devise.mappings[:user].sign_out_via
   end
 
-  get 'account/:id', :to => 'accounts#show', :as => :account
+  get 'account/:username', :to => 'accounts#show', :as => :account
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
