@@ -4,6 +4,28 @@
     :author => "geoom"
 %>
 
+<!-- Facebook Open Graph -->
+<%
+  meta [:property => "og:title", :content => "#{@tag.name}"]
+  meta [:property => "og:description", :content => "Artículos relacionados con #{@tag.name}."]
+  meta [:property => "og:type", :content => "blog"]
+  meta [:property => "og:url", :content => "#{request.original_url}"]
+  meta [:property => "og:image", :content => image_url('logotype.png')]
+  meta [:property => "fb:page_id", :content => "365738726854197"]
+  meta [:property => "fb:admins", :content => "100001120638005"]
+%>
+<!-- /Facebook Open Graph -->
+
+<!-- Twiter cards -->
+<%
+  meta [:property => "twitter:card", :content => "summary"]
+  meta [:property => "twitter:url", :content => "#{request.original_url}"]
+  meta [:property => "twitter:title", :content => "#{@tag.name}"]
+  meta [:property => "twitter:description", :content => "Artículos relacionados con #{@tag.name}."]
+  meta [:property => "twitter:image", :content => image_url('logotype.png')]
+%>
+<!-- /Twiter cards -->
+
 <!-- start: Page Title -->
 <div id="page-title">
 	<div id="page-title-inner">

@@ -1,9 +1,30 @@
 <% meta :title => "StartupPlace: Comunidad universitaria de emprendedores e innovadores en internet",
     :description => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor.",
-    :keywords => %w(startupplace, startup, sp),
+    :keywords => %w(startupplace startup sp),
     :author => "geoom"
 %>  
 
+<!-- Facebook Open Graph -->
+<%
+  meta [:property => "og:title", :content => "Startupplace | Red universitaria de emprendedores e innovadores tecnológicos en internet."]
+  meta [:property => "og:description", :content => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor."]
+  meta [:property => "og:type", :content => "website"]
+  meta [:property => "og:url", :content => "#{request.original_url}"]
+  meta [:property => "og:image", :content => image_url('logotype.png')]
+  meta [:property => "fb:page_id", :content => "365738726854197"]
+  meta [:property => "fb:admins", :content => "100001120638005"]
+%>
+<!-- /Facebook Open Graph -->
+
+<!-- Twiter cards -->
+<%
+  meta [:property => "twitter:card", :content => "summary"]
+  meta [:property => "twitter:url", :content => "#{request.original_url}"]
+  meta [:property => "twitter:title", :content => "Startupplace | Red universitaria de emprendedores e innovadores tecnológicos en internet."]
+  meta [:property => "twitter:description", :content => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor."]
+  meta [:property => "twitter:image", :content => image_url('logotype.png')]
+%>
+<!-- /Twiter cards -->
 
 <div id="wrapper">
     <div class="container">

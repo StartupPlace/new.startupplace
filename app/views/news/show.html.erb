@@ -1,8 +1,30 @@
 <% meta :title => "#{@news.title}",
-    :description => truncate(strip_tags(@news.body), :length => 500),
+    :description => truncate(strip_tags(@news.body), :length => 200),
     :keywords => "#{@news.tag_list}",
     :author => ""
 %>
+
+<!-- Facebook Open Graph -->
+<%
+  meta [:property => "og:title", :content => "#{@news.title}"]
+  meta [:property => "og:description", :content => truncate(strip_tags(@news.body), :length => 200)]
+  meta [:property => "og:type", :content => "article"]
+  meta [:property => "og:url", :content => "#{request.original_url}"]
+  meta [:property => "og:image", :content => @news.image.url(:medium)]
+  meta [:property => "fb:page_id", :content => "365738726854197"]
+  meta [:property => "fb:admins", :content => "100001120638005"]
+%>
+<!-- /Facebook Open Graph -->
+
+<!-- Twiter cards -->
+<%
+  meta [:property => "twitter:card", :content => "summary"]
+  meta [:property => "twitter:url", :content => "#{request.original_url}"]
+  meta [:property => "twitter:title", :content => "#{@news.title}"]
+  meta [:property => "twitter:description", :content => truncate(strip_tags(@news.body), :length => 200)]
+  meta [:property => "twitter:image", :content => @news.image.url(:medium)]
+%>
+<!-- /Twiter cards -->
 
 <!-- start: Page Title -->
 <div id="page-title">

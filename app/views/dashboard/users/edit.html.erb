@@ -1,5 +1,4 @@
- <% meta :title => "Editar #{@user.username}" %>
-
+ <% meta :title => "Editar #{@user.username}", :robots => "noindex" %>
 <h1>Edit an User</h1>
 
 <%= form_for @user, url: dashboard_user_path, method: :put do |f| %>

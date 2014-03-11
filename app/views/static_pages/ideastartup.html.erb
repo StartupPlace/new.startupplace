@@ -1,9 +1,30 @@
+<% meta :title => "ideaStartup",
+    :description => "Programa de desarrollo para emprendedores tecnológicos de StartupPlace.",
+    :keywords => %w(ideaStartup taller),
+    :author => "geoom"
+%> 
+
+<!-- Facebook Open Graph -->
 <%
-  meta_title "ideaStartup"
-  meta_keywords "ideaStartup, taller"
-  meta_description "Programa de desarrollo para emprendedores tecnológicos de StartupPlace"
-  meta_author "geoom"
+  meta [:property => "og:title", :content => "ideaStartup"]
+  meta [:property => "og:description", :content => "Programa de desarrollo para emprendedores tecnológicos de StartupPlace."]
+  meta [:property => "og:type", :content => "website"]
+  meta [:property => "og:url", :content => "#{request.original_url}"]
+  meta [:property => "og:image", :content => image_url('logotype.png')]
+  meta [:property => "fb:page_id", :content => "365738726854197"]
+  meta [:property => "fb:admins", :content => "100001120638005"]
 %>
+<!-- /Facebook Open Graph -->
+
+<!-- Twiter cards -->
+<%
+  meta [:property => "twitter:card", :content => "summary"]
+  meta [:property => "twitter:url", :content => "#{request.original_url}"]
+  meta [:property => "twitter:title", :content => "ideaStartup"]
+  meta [:property => "twitter:description", :content => "Programa de desarrollo para emprendedores tecnológicos de StartupPlace."]
+  meta [:property => "twitter:image", :content => image_url('logotype.png')]
+%>
+<!-- /Twiter cards -->
 
 <!-- start: Page Title -->
 <div id="page-title">
