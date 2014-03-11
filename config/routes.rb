@@ -17,7 +17,7 @@ Startupplace::Application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
   
-  devise_for :users, :skip => [:sessions, :registrations]
+  devise_for :users, :skip => [:sessions, :registrations, :passwords]
   as :user do
     get 'signup' => 'registrations#new', :as => :new_user_registration 
     post 'signup' => 'registrations#create', :as => :user_registration
