@@ -63,10 +63,13 @@
 								</p>
 							</div>
 							<div class="post-meta">
-								<span><i class="mini-ico-calendar"></i><%= news.created_at %></span> 
+								<span>
+									<i class="mini-ico-calendar"></i>
+									<%= distance_of_time_in_words_to_now(news.created_at, include_seconds: true) %>
+								</span> 
 								<span>
 									<i class="mini-ico-user"></i>
-									By <a href="#">user</a>
+									Por <%= link_to news.user.username, account_path(news.user) %>
 								</span> 
 							</div>
 						</div>

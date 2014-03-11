@@ -19,6 +19,7 @@ class Dashboard::NewsController < DashboardController
 
 	def create
 		@news = News.new(news_params)
+		@news.user_id = current_user.id
 		if @news.save
 			redirect_to dashboard_news_path(@news)
 		else

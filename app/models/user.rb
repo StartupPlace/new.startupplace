@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :authentication_keys => [:login]
 
+  has_many :news, dependent: :destroy
+
   validates :username,
   :uniqueness => {
     :case_sensitive => false

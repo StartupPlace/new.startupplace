@@ -3,11 +3,12 @@ class News < ActiveRecord::Base
   	
   friendly_id :title, use: :slugged
 
+  belongs_to :user
 	has_many :taggings
 	has_many :tags, through: :taggings
 	has_attached_file :image, styles: { medium: "700x350>", thumb: "300x150>", square: "100x50"}
 
-	validates :title, length: {
+	validates :title, uniqueness: true, length: {
     minimum: 2,
     maximum: 50,
     tokenizer: lambda { |str| str.scan(/\w+/) },
