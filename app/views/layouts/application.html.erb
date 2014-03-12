@@ -9,7 +9,10 @@
 		<link type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic" rel="stylesheet" media="screen">
 		<%= favicon_link_tag 'ico/favicon.ico', type: 'image/x-icon' %>
 		<%= csrf_meta_tags %>
-		<%= render 'layouts/shim' %>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="https://raw.github.com/scottjehl/Respond/master/dest/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<%= render 'layouts/header' %>
