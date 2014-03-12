@@ -5,25 +5,29 @@
 		<% end %>
 	</ul>
 	<p>
-		<%= f.label :title %><br/>
+		<%= f.label 'Título' %>
+		<span>* debe ser único y contener por lo menos 2 palabras</span>
+		<br/>
 		<%= f.text_field :title %>
 	</p>
 	<p>
-		<%= f.label :body %><br/>
+		<%= f.label 'Contenido' %><br/>
 		<%= f.cktext_area :body, rows: 10 %>
 	</p>
 	<p>
-	  <%= f.label :tag_list %><br />
+	  <%= f.label 'Categorías' %>
+	  <span> *ejemplo: inversión, hardware, software</span>
+	  <br />
 	  <%= f.text_field :tag_list %>
 	</p>
 	<p>
 		<% if @news.image.exists? %>
 		  <%= image_tag @news.image.url(:thumb) %><br/>
 		<% end %>
-		<%= f.label :image, "Attach a New Image" %><br />
+		<%= f.label :image, "Adjunta una imagen de portada" %><br />
 		<%= f.file_field :image %>
 	</p>
 	<p>
-		<%= f.submit %>
+		<%= f.submit "Publicar artículo" %>
 	</p>
 <% end %>

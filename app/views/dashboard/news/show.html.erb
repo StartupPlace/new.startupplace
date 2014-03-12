@@ -9,7 +9,7 @@
 <p><%= @news.body.html_safe %></p>
 
 <p>
-  Tags:
+  Etiquetas:
   <% @news.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
@@ -17,11 +17,12 @@
 
 
 <% if can? :update, News %>
-  <p><%= link_to 'edit', edit_dashboard_news_path(@news) %></p>
+  <p><%= link_to 'Editar', edit_dashboard_news_path(@news) %></p>
 <% end %>
 <% if can? :destroy, News %>
-  <p><%= link_to 'delete', dashboard_news_path(@news), method: :delete, data: {confirm: "Really delete this news?"} %></p>
+  <p><%= link_to 'Eliminar', dashboard_news_path(@news), method: :delete, data: {confirm: "¿Estas seguro de eliminar este artículo?"} %></p>
 <% end %>
+<p><%= link_to 'Así ve el mundo este artículo', news_path(@news) %></p>
 <br/>
-
-<%= link_to "<< Back to news list", dashboard_news_index_path %>
+<hr/>
+<%= link_to "Regresar a la lista de artículos", dashboard_news_index_path %>

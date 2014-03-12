@@ -57,7 +57,7 @@ gem 'unicorn'
 
 # Use boostrap as css framework
 gem 'bootstrap-sass', '2.3.2.0'
-gem "font-awesome-rails"
+gem "font-awesome-rails", '3.2.1'
 
 # Use paperclip to manage images
 gem 'paperclip', '3.5.2'

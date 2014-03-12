@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery-migrate-min
+//= require jquery_ujs
+//= require turbolinks
 //= require bootstrap.min
-//= require jquery.dcjqaccordion.2.7
 //= require jquery.scrollTo.min
-//= require jquery.nicescroll
 //= require respond.min
-//= require common-scripts
+//= require dashboard/common-scripts
 
 //= require ckeditor/init

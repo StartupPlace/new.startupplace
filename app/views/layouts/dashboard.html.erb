@@ -13,13 +13,32 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="account">
-		  <% if current_user %>
-		    <span>Welcome, <%= current_user.email %></span>
-		    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-		  <% end %>
-		</div>
-		<%= yield %>
-		<p class="flash"><%= flash.notice %></p>
+		<section id="container">
+			
+			<%= render 'shared/dashboard/header' %>
+			<%= render 'shared/dashboard/sidebar' %>
+
+			<!--main content-->
+			<section id="main-content">
+				<section class="wrapper site-min-height">
+					<!-- page-->
+					<p class="flash"><%= flash.notice %></p>
+					<%= yield %>
+					<!--/ page -->
+				</section>
+			</section>
+			<!--/main content -->
+
+			<%= render 'shared/dashboard/footer' %>
+		</section>
+		<%= javascript_include_tag "jquery.nicescroll", "data-turbolinks-track" => true %>
+		<script type="text/javascript">
+		$(function(){
+			// custom scrollbar
+			$("#sidebar").niceScroll({styler:"fb",cursorcolor:"#e8403f", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});
+
+			$("html").niceScroll({styler:"fb",cursorcolor:"#e8403f", cursorwidth: '6', cursorborderradius: '10px', background: '#404040', spacebarenabled:false,  cursorborder: '', zindex: '1000'});
+		});
+		</script>
 	</body>
 </html>

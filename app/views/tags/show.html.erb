@@ -46,17 +46,19 @@
 				<% if @tag.news.each do |news| %>
 					<!-- start: Post -->
 					<div class="post">
-						<div class="post-img picture">
-							<%= image_tag news.image.url(:medium)%>
-						</div>
+						<% if news.image.exists? %>
+							<div class="post-img picture">
+								<%= image_tag news.image.url(:medium)%>
+							</div>
+						<% end %>
 						<span class="post-icon standard"><i class="ico-pen circle"></i></span>
 						<div class="post-content">
 							<div class="post-title">
-								<h2><%= link_to news.title, news_path(news), id: 'news_#{news.id}' %></h2>
+								<h2><%= link_to news.title.html_safe, news_path(news), id: 'news_#{news.id}' %></h2>
 							</div>
 							<div class="post-description">
 								<p>
-									<%= news.body %>
+									<%= news.body.html_safe %>
 								</p>
 							</div>
 							<div class="post-meta">

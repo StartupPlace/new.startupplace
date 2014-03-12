@@ -1,0 +1,20 @@
+<aside>
+	<div id="sidebar"  class="nav-collapse ">
+		<ul class="sidebar-menu" id="nav-accordion">
+			<li>
+				<%= link_to(dashboard_path, class: is_active(dashboard_path)) do %>
+					<i class="icon-dashboard"></i>
+					<span>Dashboard</span>
+				<% end %>
+			</li>
+			<% if can? :create, News %>
+				<li>
+					<%= link_to(dashboard_news_index_path, class: is_active(dashboard_news_index_path)) do %>
+						<i class="icon-list-alt"></i>
+						<span>Mis artículos</span>
+					<% end %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</aside>

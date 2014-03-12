@@ -1,0 +1,42 @@
+<header class="header white-bg">
+	<div class="sidebar-toggle-box">
+		<div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+	</div>
+	<%= link_to(dashboard_path, class: "logo") do %>
+	Startup<span>Place</span>
+	<% end %>
+	<div class="top-nav ">
+		<ul class="nav pull-right top-menu">
+				<% if can? :create, News %>
+				  <li>
+						<button type="button" class="btn btn-shadow btn-success" onclick="window.location='<%= new_dashboard_news_path %>'">
+							<i class="icon-pencil"></i> Publicar 
+						</button>
+					</li>
+				<% end %>
+				<% if current_user %>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<%= image_tag('avatar_missing_small.png', alt: 'avatar')%>
+							<span class="username"><%= current_user.username %></span>
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu extended logout">
+							<div class="log-arrow-up"></div>
+							<li>
+								<%= link_to(account_path(current_user.username)) do %>
+								<i class="icon-suitcase"></i> Perfil
+								<% end %>
+							</li>
+							<li><a href="#"><i class="icon-cog"></i> Config</a></li>
+							<li>
+								<%= link_to(destroy_user_session_path, method: :delete) do %>
+								<i class="icon-key"></i> Salir
+								<% end %>
+							</li>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	</header>

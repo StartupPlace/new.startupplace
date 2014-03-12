@@ -21,10 +21,6 @@
 //= require slider
 //= require fancybox
 
-//= require ckeditor/init
-
-//= require_tree .
-
 $(document).on('ready', function(){
 
 	$('#flex1').flexslider();
