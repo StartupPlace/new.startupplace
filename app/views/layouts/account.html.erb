@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= render 'shared/meta_tags' %>
+	<%= stylesheet_link_tag "simple_form", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "simple_form", "data-turbolinks-track" => true %>
+	<%= favicon_link_tag 'ico/favicon.ico', type: 'image/x-icon' %>
+	<%= csrf_meta_tags %>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="https://raw.github.com/scottjehl/Respond/master/dest/respond.min.js"></script>
+			<![endif]-->
+		</head>
+		<body class="full-width">
+			<header class="header white-bg">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<%= link_to image_tag("simpl-logo.png", alt: 'startupplace', height: "50"), root_path, class: 'logo image' %>
+
+					<div class="horizontal-menu navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li><%= link_to "Inicio", root_path %></li>
+							<li><%= link_to "News", news_index_path %></li>
+							<li><%= link_to "ideaStartup", ideastartup_path %></li>
+							<li><%= link_to "Sobre nosotros", about_path %></li>
+						</ul>
+					</div>
+
+					<div class="top-nav ">
+							<ul class="nav pull-right top-menu">
+								<% if can? :create, News %>
+								<li>
+									<button type="button" class="btn btn-shadow btn-success" onclick="window.location='<%= new_dashboard_news_path %>'">
+										<i class="icon-pencil"></i> Publicar 
+									</button>
+								</li>
+								<% end %>
+								<% if current_user %>
+								<li class="dropdown">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+										<%= image_tag('avatar_missing_small.png', alt: 'avatar')%>
+										<span class="username"><%= current_user.username %></span>
+										<b class="caret"></b>
+									</a>
+									<ul class="dropdown-menu extended logout">
+										<div class="log-arrow-up"></div>
+										<li>
+											<%= link_to(account_path(current_user.username)) do %>
+											<i class="icon-suitcase"></i> Perfil
+											<% end %>
+										</li>
+										<li><a href="#"><i class="icon-cog"></i> Config</a></li>
+										<li>
+											<%= link_to(destroy_user_session_path, method: :delete) do %>
+											<i class="icon-key"></i> Salir
+											<% end %>
+										</li>
+									</ul>
+								</li>
+								<% end %>
+							</ul>
+						</div>					
+				</div>
+
+			</header>
+
+			<section id="main-content" style="margin-left: 0px;">
+				<section class="wrapper">
+					<%= yield %>
+				</section>
+			</section>
+			<footer class="site-footer">
+				<div class="text-center">
+					2014 &copy; Design by VectorLab.
+					<a href="#" class="go-top">
+						<i class="icon-angle-up"></i>
+					</a>
+				</div>
+			</footer>
+		</body>
+		</html>

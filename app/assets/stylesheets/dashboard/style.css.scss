@@ -366,6 +366,10 @@ a.logo {
   text-transform: uppercase;
 }
 
+a.logo.image {
+  margin-top: 5px;
+}
+
 a.logo:hover, a.logo:focus {
   text-decoration: none;
   outline: none;
