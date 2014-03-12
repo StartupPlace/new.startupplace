@@ -1,7 +1,5 @@
 Startupplace::Application.routes.draw do
 
-  get "users/edit"
-  get "users/update"
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'ideastartup' => 'static_pages#ideastartup'
@@ -33,6 +31,8 @@ Startupplace::Application.routes.draw do
   end
 
   get 'account/:username', :to => 'accounts#show', :as => :account
+
+  resources :sitemap, only: [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
