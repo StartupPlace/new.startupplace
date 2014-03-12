@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 	def get_layout
 		module_name = self.class.to_s.split("::").first
-		return (module_name.eql?("Devise") ? "dashboard" : "application")
+		return (module_name.eql?("Devise") ? "simple_form" : "application")
 	end
 
 	protected

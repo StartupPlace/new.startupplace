@@ -1,24 +1,26 @@
- <% meta :title => "Sign in" %>
+ <% meta :title => "Sign in",
+      :description => "Inicio de sesión.",
+      :keywords => %w(signin login),
+      :author => "geoom"
+%>
 
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-
-	<% flash.each do |name, msg| %>
-	      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	<% end %>
-
-  <div><%= f.label :login %><br />
-  <%= f.text_field :login, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: "form-signin"}) do |f| %>
+  <h2 class="form-signin-heading">Iniciar sesión</h2>
+  <div class="login-wrap">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+    <%= f.text_field :login, :autofocus => true, class: "form-control", placeholder: "usuario o email" %>
+    <%= f.password_field :password, class: "form-control", placeholder: "password" %>
+    <% if devise_mapping.rememberable? -%>
+      <label class="checkbox">
+        <%= f.check_box :remember_me %> <%= f.label "recordame" %>
+      </label>
+    <% end -%>
+    <%= f.submit "Ingresar", class: "btn btn-lg btn-login btn-block" %>
+    <div class="registration">
+      ¿Todavía no tienes una cuenta?
+      <%= link_to "Crear una cuenta", new_user_registration_path %>
+    </div>
+  </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

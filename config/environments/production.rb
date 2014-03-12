@@ -30,7 +30,7 @@ Startupplace::Application.configure do
   config.assets.compile = false
 
   # since i changed the name of application.css.scss then ...
-  config.assets.precompile += %w( app.css dashboard.css jquery.nicescroll.js)
+  config.assets.precompile += %w( app.css dashboard.css simple_form.css jquery.nicescroll.js)
 
   # Generate digests for assets URLs.
   config.assets.digest = true

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= render 'shared/meta_tags' %>
+		<%= stylesheet_link_tag "simple_form", media: "all", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "simple_form", "data-turbolinks-track" => true %>
+		<%= favicon_link_tag 'ico/favicon.ico', type: 'image/x-icon' %>
+		<%= csrf_meta_tags %>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="https://raw.github.com/scottjehl/Respond/master/dest/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<section id="container">
+			<%= yield %>
+		</section>
+	</body>
+</html>

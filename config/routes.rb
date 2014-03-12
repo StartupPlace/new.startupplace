@@ -19,10 +19,10 @@ Startupplace::Application.routes.draw do
   as :user do
     get 'signup' => 'registrations#new', :as => :new_user_registration 
     post 'signup' => 'registrations#create', :as => :user_registration
-    get 'account/cancel' => 'registrations#cancel', :as => :cancel_user_registration
     get 'account/edit' => 'registrations#edit', :as => :edit_user_registration
     put 'signup' => 'registrations#update'
     delete 'signup' => 'registrations#destroy'
+    get 'account/cancel' => 'registrations#cancel', :as => :cancel_user_registration
 
     get 'signin' => 'devise/sessions#new', :as => :new_user_session
     post 'signin' => 'devise/sessions#create', :as => :user_session
