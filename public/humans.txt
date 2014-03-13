@@ -1,0 +1,17 @@
+/* startupplace.org */
+/* humanstxt.org */
+
+/* TEAM */
+	Sofware developer: George Mejia
+	Contact: hi.geoom@gmail.com
+	Twitter: @geoome
+	From: Lima - Perú
+
+/* SITE */
+	Last update: 2014/03/13
+	Language: Spanish / English / Castellano
+	Doctype: HTML5
+	Standards: HTML5, CSS3
+	Components: Ruby On Rails, Bootstrap 3.0.2, jQuery 1.10.1
+	IDE: RubyMine
+	Editor: Sublime Text 3
