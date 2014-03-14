@@ -16,8 +16,8 @@
 /tmp
 
 # Ignore images uploaded
-/public/system
-/public/ckeditor_assets
-/public/assets
+public/system
+public/ckeditor_assets
+public/assets/*
 
 notes.txt
