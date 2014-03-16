@@ -1,28 +1,28 @@
 <% meta :title => "#{@news.title}",
-    :description => truncate(strip_tags(@news.body), :length => 200),
-    :keywords => "#{@news.tag_list}",
-    :author => ""
+:description => truncate(strip_tags(@news.body), :length => 200),
+:keywords => "#{@news.tag_list}",
+:author => ""
 %>
 
 <!-- Facebook Open Graph -->
 <%
-  meta [:property => "og:title", :content => "#{@news.title}"]
-  meta [:property => "og:description", :content => truncate(strip_tags(@news.body), :length => 200)]
-  meta [:property => "og:type", :content => "article"]
-  meta [:property => "og:url", :content => "#{request.original_url}"]
-  meta [:property => "og:image", :content => @news.image.url(:medium)]
-  meta [:property => "fb:page_id", :content => "365738726854197"]
-  meta [:property => "fb:admins", :content => "100001120638005"]
+meta [:property => "og:title", :content => "#{@news.title}"]
+meta [:property => "og:description", :content => truncate(strip_tags(@news.body), :length => 200)]
+meta [:property => "og:type", :content => "article"]
+meta [:property => "og:url", :content => "#{request.original_url}"]
+meta [:property => "og:image", :content => @news.image.url(:medium)]
+meta [:property => "fb:page_id", :content => "365738726854197"]
+meta [:property => "fb:admins", :content => "100001120638005"]
 %>
 <!-- /Facebook Open Graph -->
 
 <!-- Twiter cards -->
 <%
-  meta [:property => "twitter:card", :content => "summary"]
-  meta [:property => "twitter:url", :content => "#{request.original_url}"]
-  meta [:property => "twitter:title", :content => "#{@news.title}"]
-  meta [:property => "twitter:description", :content => truncate(strip_tags(@news.body), :length => 200)]
-  meta [:property => "twitter:image", :content => @news.image.url(:medium)]
+meta [:property => "twitter:card", :content => "summary"]
+meta [:property => "twitter:url", :content => "#{request.original_url}"]
+meta [:property => "twitter:title", :content => "#{@news.title}"]
+meta [:property => "twitter:description", :content => truncate(strip_tags(@news.body), :length => 200)]
+meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 %>
 <!-- /Twiter cards -->
 
@@ -37,20 +37,19 @@
 	</div>	
 </div>
 <!-- end: Page Title -->
-			
+
 <!--start: Wrapper-->
 <div id="wrapper">
 	<!--start: Container -->
 	<div class="container">
-		<!--start: Row -->
 		<div class="row">
 			<div class="span8 offset2">
-				<!-- start: Post -->
+				<!-- news -->
 				<div class="post post-page">
 					<% if @news.image.exists? %>
-						<div class="post-img picture">
-							<%= image_tag @news.image.url(:medium)%>
-						</div>
+					<div class="post-img picture">
+						<%= image_tag @news.image.url(:medium)%>
+					</div>
 					<% end %>
 
 					<div class="post-content">
@@ -70,14 +69,26 @@
 							</span>
 						</div>
 					</div>
-				
 				</div>
-				<!-- end: Post -->
-				
-				<div class="clear"></div>
+				<!-- /news -->
+				<div style="height: 20px"></div>
+				<!-- comments -->
+				<div class="comments-sec">
+					<div id="disqus_thread"></div>
+					<script type="text/javascript">
+		        var disqus_shortname = 'startupplace';
+		        (function() {
+		        	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		        	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		        })();
+		      </script>
+		      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		    </div>
+			    <!-- /comments -->
+			  <div class="clear"></div>
 			</div>	
-		
-	</div>
-	<!--end: Container-->
+		</div>
+	</div><!--/container-->
 </div>
-<!-- end: Wrapper  -->	
