@@ -34,6 +34,12 @@ group :development, :test do
 	gem 'sqlite3'
 end
 
+group :development do
+	gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'sidekiq'
+end
+
 group :production do
 
 end

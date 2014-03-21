@@ -20,4 +20,10 @@ public/system
 public/ckeditor_assets
 public/assets/*
 
+Capfile
+config/deploy.rb
+config/nginx.conf
+config/unicorn.rb
+config/unicorn_init.sh
+
 sp-notes-rails.txt
