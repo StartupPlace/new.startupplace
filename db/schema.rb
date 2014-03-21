@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(version: 20140311023116) do
     t.integer  "user_id"
   end
 
-  add_index "news", ["slug"], name: "index_news_on_slug", unique: true, using: :btree
-
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "news_id"
