@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+  require "html_truncator"
+
 	def meta_tags
     @meta_tags ||= []
   end

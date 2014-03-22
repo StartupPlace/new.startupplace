@@ -73,6 +73,8 @@ GEM
       activerecord (~> 4.0.0)
     highline (1.6.21)
     hike (1.2.3)
+    html_truncator (0.4.0)
+      nokogiri (~> 1.5)
     i18n (0.6.9)
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
@@ -191,6 +193,7 @@ DEPENDENCIES
   devise (= 3.2.2)
   font-awesome-rails (= 3.2.1)
   friendly_id (~> 5.0.0)
+  html_truncator (~> 0.2)
   jbuilder (~> 1.2)
   jquery-migrate-rails
   jquery-rails

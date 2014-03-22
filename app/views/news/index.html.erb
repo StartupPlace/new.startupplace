@@ -31,7 +31,7 @@
 	<div id="page-title-inner">
 		<!-- start: Container -->
 		<div class="container">
-			<h2><i class="ico-pencil ico-white"></i>News</h2>
+			<h1><i class="ico-pencil ico-white"></i>News</h1>
 		</div><!-- end: Container  -->
 	</div>	
 </div>
@@ -52,27 +52,29 @@
 								<%= image_tag news.image.url(:medium)%>
 							</div>
 						<% end %>
-						<span class="post-icon standard"><i class="ico-pen circle"></i></span>
+						<!-- Post content -->
 						<div class="post-content">
 							<div class="post-title">
+								<span class="post-icon standard"><i class="ico-pen circle"></i></span>
 								<h2><%= link_to news.title.html_safe, news_path(news), id: 'news_#{news.id}' %></h2>
 							</div>
 							<div class="post-description">
 								<p>
-									<%= news.body.html_safe %>
+									<%= HTML_Truncator.truncate(news.body, 250, :ellipsis => (link_to "... continuar leyendo", news_path(news), id: 'news_#{news.id}')).html_safe %>
 								</p>
 							</div>
-							<div class="post-meta">
-								<span>
-									<i class="mini-ico-calendar"></i>
-									<%= distance_of_time_in_words_to_now(news.created_at, include_seconds: true) %>
-								</span> 
-								<span>
-									<i class="mini-ico-user"></i>
-									Por <%= link_to news.user.username, account_path(news.user.username) %>
-								</span> 
-							</div>
-						</div>
+						</div><!-- /Post content -->
+						<!-- post meta -->
+						<div class="post-meta">
+							<span>
+								<i class="mini-ico-calendar"></i>
+								<%= distance_of_time_in_words_to_now(news.created_at, include_seconds: true) %>
+							</span> 
+							<span>
+								<i class="mini-ico-user"></i>
+								Por <%= link_to news.user.username, account_path(news.user.username) %>
+							</span> 
+						</div><!-- /post meta -->
 					</div><!-- end: Post -->
 				<% end.empty? %>
 						<p>Sin noticias por el momento :(</p>

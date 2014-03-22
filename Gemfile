@@ -74,6 +74,9 @@ gem 'aws-sdk'
 # Redactor tool for publishers
 gem "ckeditor"
 
+# For truncate news html
+gem "html_truncator", "~>0.2"
+
 # Slugging and permalink plugins for ActiveRecord
 gem 'friendly_id', '~> 5.0.0'
 

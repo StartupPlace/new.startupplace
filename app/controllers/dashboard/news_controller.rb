@@ -1,9 +1,9 @@
 class Dashboard::NewsController < DashboardController
 	include Dashboard::NewsHelper
 
+	before_filter :authenticate_user!
 	load_and_authorize_resource :find_by => :slug
 	skip_authorize_resource :only => :show
-	before_filter :authenticate_user!, :except => [:show, :index]
 
 	def index
 		@news = News.where("user_id = ?", current_user.id)

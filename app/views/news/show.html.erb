@@ -21,22 +21,15 @@ meta [:property => "fb:admins", :content => "100001120638005"]
 meta [:property => "twitter:card", :content => "summary"]
 meta [:property => "twitter:url", :content => "#{request.original_url}"]
 meta [:property => "twitter:title", :content => "#{@news.title}"]
-meta [:property => "twitter:description", :content => truncate(strip_tags(@news.body), :length => 200)]
+meta [:property => "twitter:description", :content => HTML_Truncator.truncate(@news.body, 50).html_safe ]
 meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 %>
 <!-- /Twiter cards -->
 
-<!-- start: Page Title -->
-<div id="page-title">
-	<div id="page-title-inner">
-		<!-- start: Container -->
-		<div class="container">
-			<h2><i class="ico-pencil ico-white"></i><%= @news.title.html_safe  %></h2>
-		</div>
-		<!-- end: Container  -->
-	</div>	
-</div>
-<!-- end: Page Title -->
+<!-- start: Page Title fantasma-->
+<div id="page-title"><div id="page-title-inner" style="padding: 3px">
+	</div></div>
+<!-- end: Page Title fantasma -->
 
 <!--start: Wrapper-->
 <div id="wrapper">
@@ -44,20 +37,15 @@ meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 	<div class="container">
 		<div class="row">
 			<div class="span8 offset2">
-				<!-- news -->
+				<!-- post -->
 				<div class="post post-page">
-					<% if @news.image.exists? %>
-					<div class="post-img picture">
-						<%= image_tag @news.image.url(:medium)%>
-					</div>
-					<% end %>
-
+					
+					<!-- post content -->
 					<div class="post-content">
-						<div class="post-description">
-							<p>
-								<%= @news.body.html_safe %>
-							</p>
+						<div class="post-title" style="text-align: center">
+							<h1><%= @news.title.html_safe  %></h1>
 						</div>
+						<!-- post meta -->
 						<div class="post-meta">
 							<span>
 								<i class="mini-ico-calendar"></i>
@@ -67,10 +55,31 @@ meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 								<i class="mini-ico-user"></i>
 								Por <%= link_to @news.user.username, account_path(@news.user.username) %>
 							</span>
+						</div><!-- /post meta -->
+						<% if @news.image.exists? %>
+						<div class="post-img picture">
+							<%= image_tag @news.image.url(:medium)%>
 						</div>
-					</div>
+					<% end %>
+						<div class="post-description">
+							<p>
+								<%= @news.body.html_safe %>
+							</p>
+						</div>
+					</div><!-- /post content -->
+					<!-- post meta -->
+					<div class="post-meta">
+						<span>
+							<i class="mini-ico-calendar"></i>
+							<%= distance_of_time_in_words_to_now(@news.created_at, include_seconds: true) %>
+						</span>
+						<span>
+							<i class="mini-ico-user"></i>
+							Por <%= link_to @news.user.username, account_path(@news.user.username) %>
+						</span>
+					</div><!-- /post meta -->
 				</div>
-				<!-- /news -->
+				<!-- /post -->
 				<div style="height: 20px"></div>
 				<!-- comments -->
 				<div class="comments-sec">

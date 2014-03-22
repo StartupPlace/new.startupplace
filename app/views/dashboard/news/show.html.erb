@@ -3,7 +3,7 @@
 <h1><%= @news.title.html_safe %></h1>
 
 <% if @news.image.exists? %>
-	<p><%= image_tag @news.image.url(:thumb)%></p>
+	<p><%= image_tag @news.image.url(:medium)%></p>
 <% end %>
 
 <p><%= @news.body.html_safe %></p>
