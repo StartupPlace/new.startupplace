@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
+
 //= require jquery.scrollTo.min
 //= require respond.min
 //= require dashboard/common-scripts
