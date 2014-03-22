@@ -24,7 +24,9 @@
 		<% if @news.image.exists? %>
 		  <%= image_tag @news.image.url(:thumb) %><br/>
 		<% end %>
-		<%= f.label :image, "Adjunta una imagen de portada" %><br />
+		<%= f.label :image, "Adjunta una imagen de portada" %>
+		<span>* la imagen de portada debe guardar una proporcion de 700x350 pixeles para evitar una distorcion indeseada</span>
+		<br />
 		<%= f.file_field :image %>
 	</p>
 	<p>

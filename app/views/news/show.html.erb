@@ -28,7 +28,7 @@ meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 
 <!-- start: Page Title fantasma-->
 <div id="page-title"><div id="page-title-inner" style="padding: 3px">
-	</div></div>
+</div></div>
 <!-- end: Page Title fantasma -->
 
 <!--start: Wrapper-->
@@ -57,27 +57,14 @@ meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 							</span>
 						</div><!-- /post meta -->
 						<% if @news.image.exists? %>
-						<div class="post-img picture">
-							<%= image_tag @news.image.url(:medium)%>
-						</div>
-					<% end %>
+							<div class="post-img picture">
+								<%= image_tag @news.image.url(:medium)%>
+							</div>
+						<% end %>
 						<div class="post-description">
-							<p>
-								<%= @news.body.html_safe %>
-							</p>
+							<%= @news.body.html_safe %>
 						</div>
 					</div><!-- /post content -->
-					<!-- post meta -->
-					<div class="post-meta">
-						<span>
-							<i class="mini-ico-calendar"></i>
-							<%= distance_of_time_in_words_to_now(@news.created_at, include_seconds: true) %>
-						</span>
-						<span>
-							<i class="mini-ico-user"></i>
-							Por <%= link_to @news.user.username, account_path(@news.user.username) %>
-						</span>
-					</div><!-- /post meta -->
 				</div>
 				<!-- /post -->
 				<div style="height: 20px"></div>
@@ -85,18 +72,18 @@ meta [:property => "twitter:image", :content => @news.image.url(:medium)]
 				<div class="comments-sec">
 					<div id="disqus_thread"></div>
 					<script type="text/javascript">
-		        var disqus_shortname = 'startupplace';
-		        (function() {
-		        	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		        	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		        })();
-		      </script>
-		      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-		    </div>
-			    <!-- /comments -->
-			  <div class="clear"></div>
+						var disqus_shortname = 'startupplace';
+						(function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+				</div>
+				<!-- /comments -->
+				<div class="clear"></div>
 			</div>	
 		</div>
 	</div><!--/container-->
