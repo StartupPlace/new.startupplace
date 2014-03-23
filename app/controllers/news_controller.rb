@@ -2,7 +2,7 @@ class NewsController < ApplicationController
   
   def index
   	@tags = Tag.all
-  	@news = News.all
+  	@news = News.find(:all, :order => "created_at DESC")
   end
 
   def show

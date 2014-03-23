@@ -1,269 +1,128 @@
 <% meta :title => "StartupPlace: Comunidad universitaria de emprendedores e innovadores en internet",
-    :description => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor.",
-    :keywords => %w(startupplace startup sp),
-    :author => "geoom"
+:description => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor.",
+:keywords => %w(startupplace startup sp),
+:author => "geoom"
 %>  
 
 <!-- Facebook Open Graph -->
 <%
-  meta [:property => "og:title", :content => "Startupplace | Red universitaria de emprendedores e innovadores tecnológicos en internet."]
-  meta [:property => "og:description", :content => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor."]
-  meta [:property => "og:type", :content => "website"]
-  meta [:property => "og:url", :content => "#{request.original_url}"]
-  meta [:property => "og:image", :content => image_url('large-sp-logotype.png')]
-  meta [:property => "fb:page_id", :content => "365738726854197"]
-  meta [:property => "fb:admins", :content => "100001120638005"]
+meta [:property => "og:title", :content => "Startupplace | Red universitaria de emprendedores e innovadores tecnológicos en internet."]
+meta [:property => "og:description", :content => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor."]
+meta [:property => "og:type", :content => "website"]
+meta [:property => "og:url", :content => "#{request.original_url}"]
+meta [:property => "og:image", :content => image_url('large-sp-logotype.png')]
+meta [:property => "fb:page_id", :content => "365738726854197"]
+meta [:property => "fb:admins", :content => "100001120638005"]
 %>
 <!-- /Facebook Open Graph -->
 
 <!-- Twiter cards -->
 <%
-  meta [:property => "twitter:card", :content => "summary"]
-  meta [:property => "twitter:url", :content => "#{request.original_url}"]
-  meta [:property => "twitter:title", :content => "Startupplace | Red universitaria de emprendedores e innovadores tecnológicos en internet."]
-  meta [:property => "twitter:description", :content => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor."]
-  meta [:property => "twitter:image", :content => image_url('logotype.png')]
+meta [:property => "twitter:card", :content => "summary"]
+meta [:property => "twitter:url", :content => "#{request.original_url}"]
+meta [:property => "twitter:title", :content => "Startupplace | Red universitaria de emprendedores e innovadores tecnológicos en internet."]
+meta [:property => "twitter:description", :content => "En StartupPlace te guiamos en la busca del éxito como emprendedor. Atrévete a innovar e iniciar la aventura como emprendedor."]
+meta [:property => "twitter:image", :content => image_url('logotype.png')]
 %>
 <!-- /Twiter cards -->
 
 <div id="wrapper">
-    <div class="container">
-        <!-- start: Flexslider -->
-        <div class="slider">
-            <div id="flex1" class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <%= image_tag('flex-slider/slider1.jpg', alt: 'startupplace')%>
-                        <div class="slide-caption n hidden-phone">
-                            <p>
-                                Ser un emprendedor es vivir unos pocos a&ntilde;os de tu vida como nadie quiere, 
-                                de tal forma que puedes disfrutar del resto de tu vida como nadie puede
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <%= image_tag('flex-slider/slider2.jpg', alt: 'startupplace')%>
-                    </li>
-                    <li>
-                        <%= image_tag('flex-slider/slider3.jpg', alt: 'startupplace')%>
-                        <div class="slide-caption hidden-phone">
-                            <p>
-                                Un hombre con una nueva idea es un loco hasta que &eacute;sta triunfa.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+  <div class="container">
+    <!-- start: Flexslider -->
+    <div class="slider">
+      <div id="flex1" class="flexslider">
+        <ul class="slides">
+          <li>
+            <%= image_tag('flex-slider/slider1.jpg', alt: 'startupplace')%>
+            <div class="slide-caption n hidden-phone">
+              <p>
+                Ser un emprendedor es vivir unos pocos a&ntilde;os de tu vida como nadie quiere, 
+                de tal forma que puedes disfrutar del resto de tu vida como nadie puede
+              </p>
             </div>
-        </div>
-        <!-- end: Flexslider -->                
-        <hr>
-        <!-- start: Row -->
-        <div class="row">
-            <div class="span4">
-                <div class="icons-box">
-                    <i class="ico-lightbulb ico-white circle-color-full big-color"></i>
-                    <div class="title"><h3>Desarrolla tu idea</h3></div>
-                    <p>
-                        Todos tenemos ideas pero si no tienen acci&oacute;n son in&uacute;tiles, la mayor&iacute;a de tus ideas no garantizan ser geniales hasta que decides contarla a otras personas, aprovechar sus experiencias y sugerencias para mejorar tu idea lo mejor posible.                                                
-                    </p>
-                    <div class="clear"></div>
-                </div>
+          </li>
+          <li>
+            <%= image_tag('flex-slider/slider2.jpg', alt: 'startupplace')%>
+          </li>
+          <li>
+            <%= image_tag('flex-slider/slider3.jpg', alt: 'startupplace')%>
+            <div class="slide-caption hidden-phone">
+              <p>
+                Un hombre con una nueva idea es un loco hasta que &eacute;sta triunfa.
+              </p>
             </div>
-            <div class="span4">
-                <div class="icons-box">
-                    <i class="ico-group ico-white circle-color-full big-color"></i>
-                    <div class="title"><h3>Conf&iacute;a en tu equipo</h3></div>
-                    <p>
-                        Selecciona cuidadosamente a los co-fundadores en base a buenas relaciones y un insuperable compromiso para emprender la aventura, esta es la mejor garant&iacute;a de la supervivencia de tu Startup.
-                    </p>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="span4">
-                <div class="icons-box">
-                    <i class="ico-alarm ico-white circle-color-full big-color"></i>
-                    <div class="title"><h3>Ejecuta r&aacute;pidamente</h3></div>
-                    <p>
-                        Construye algo muy simple y lo m&aacute;s significativamente posible como para que los inversionistas entiendan tu idea. El exceso de ingenier&iacute;a puede arruinarte toda la aventura.
-                    </p>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-        <!-- end: Row -->
-        <hr>
-        <!-- start: Row -->
-        <div class="row">
-                <div class="span9 home-entry">
-                    <hr class="separation"/>
-                    <div class="row">
-                        <div class="span5">
-                            <div class="item-description">
-                                <h2>
-                                <%= link_to 'Startup week university', root_path %>
-                                </h2>
-                                <p>
-                                Hemos preparado una serie de eventos sobre emprendimiento tecnológicos 
-                                en donde t&uacute; ser&aacute;s parte de una jornada llena de Startups, experiencias, historias
-                                ,secretos, etc. Todo desarrollado en 5 universidades de Lima 
-                                (San Marcos, UNI, UNFV, PUCP, USIL), imposible perd&eacute;rselo (ingreso libre).
-                                </p>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="picture">
-                            	<%= link_to image_tag("news/swu.jpg", alt: 'startup poster'), root_path %>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="separation"/>
-                    <div class="row">
-                        <div class="span5 visible-phone">
-                            <div class="item-description">
-                                <h2>
-                                	<%= link_to 'ideaStartup: convierte tu idea en un negocio', root_path %>
-                                </h2>
-                                <p>
-                                    El programa de desarrollo de emprendedores tecnológicos que hemos 
-                                    desarrollado para ti, busca ser tu mejor herramienta para construir 
-                                    una Startup y reducir el riesgo de fallo agrupando un conjunto de 
-                                    buenas prácticas que te serán indispensable en tu aventura por buscar 
-                                    un modelo de negocio apropiado.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <div class="picture">
-                            <%= link_to image_tag("news/taller.jpg", alt: 'startup poster'), root_path %>
-                            </div>
-                        </div>
-                        <div class="span5 hidden-phone">
-                            <div class="item-description">
-                                <h2>
-                                	<%= link_to 'ideaStartup: convierte tu idea en un negocio', root_path %>
-                                </h2>
-                                <p>
-                                    El programa de desarrollo de emprendedores tecnológicos que hemos 
-                                    desarrollado para ti, busca ser tu mejor herramienta para construir 
-                                    una Startup y reducir el riesgo de fallo agrupando un conjunto de 
-                                    buenas prácticas que te serán indispensable en tu aventura por buscar 
-                                    un modelo de negocio apropiado.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="visible-phone"/>
-                <div class="span3">
-                    <hr>
-                    <!-- start: social -->
-                    <div class="social-box">
-                        <!-- Start: like in facebook button -->
-                        <div class="item">
-                            <div class="fb-like" data-href="https://www.facebook.com/StartupPlace" data-width="100" data-show-faces="true" data-send="false"></div>
-                            <div id="fb-root"></div>
-                            <script>
-                            (function(d, s, id) {
-                              var js, fjs = d.getElementsByTagName(s)[0];
-                              if (d.getElementById(id)) return;
-                              js = d.createElement(s); js.id = id;
-                              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                              fjs.parentNode.insertBefore(js, fjs);
-                            }(document, 'script', 'facebook-jssdk'));
-                            </script>
-                        </div>
-                        <!-- End: like in facebook button -->
-                        <hr class="separation"/>
-                        <!-- Start: follow in twitter button -->
-                        <div class="item">
-                            <a href="https://twitter.com/StartupPlace" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @StartupPlace</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                        </div>
-                        <!-- End: follor in twitter button -->
-                        <hr class="separation">
-                        <!-- Start: follow in G+ button -->
-                        <div class="item">
-                            <div class="g-follow" data-annotation="bubble" data-height="24" data-href="https://plus.google.com/101854254152381884237" data-rel="publisher"></div>
-                            <script type="text/javascript">
-                                window.___gcfg = {lang: 'es-419'};
-
-                                (function() {
-                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                                po.src = 'https://apis.google.com/js/plusone.js';
-                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                                })();
-                             </script>
-                        </div>
-                        <!-- End: follor in G+ button -->
-                        <hr class="separation"/>
-
-                        <!-- Start: follow in Youtube button -->
-                        <div class="item">
-                            <script src="https://apis.google.com/js/plusone.js"></script>
-                            <div class="g-ytsubscribe" data-channel="startupplace" data-layout="full"></div>
-                        </div>
-                        <!-- End: follow in Youtube button -->
-                    </div>
-                    <!-- end: social -->
-                </div>
-        </div>
-        <!-- end: Row -->
-        <hr/>
-        <!-- start: Row -->
-        <div class="row">
-            <div class="span9 newsletter">
-                <div class="title"><h3>Otras historias</h3></div>
-                <!-- start: Row -->
-                <div class="row">
-                    <div class="span3">
-                        <div class="picture">
-                            <%= link_to('events/13-003/afiche_taller.png') do %>
-                                <%= image_tag("events/13-003/afiche_taller.png", alt: 'startup poster') %>
-                                <div class="image-overlay-zoom"></div>
-                            <% end %>
-                        </div>
-                        <div class="item-description">
-                            <h4><%= link_to 'Startup', root_path %></h4>
-                            <p>Pasión por emprender, tecnología por descubrir....</p>
-                        </div>
-                        <%= link_to 'Startup', root_path , class: 'post-entry' %>
-                    </div>
-                    <div class="span3">
-                        <div class="post-img video">
-                            <div class="flex-video">
-                                <iframe src="http://player.vimeo.com/video/49258882?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            </div>
-                        </div>
-                        <div class="item-description">
-                            <h4><%= link_to 'Nubelo', root_path %></h4>
-                            <p>
-                                Encontr&aacute; de forma f&aacute;cil, segura y gratuita a los profesionales 
-                                para cubrir tus necesidades.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div class="post-img video">
-                            <div class="flex-video">
-                                <iframe src="http://player.vimeo.com/video/51110850?title=0&amp;byline=0&amp;portrait=0" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
-                            </div>
-                        </div>
-                        <div class="item-description">
-                            <h4>
-                                <%= link_to 'Helena App for tablets', root_path %>
-                            </h4>
-                            <p>
-                                Helena es una aplicación que permite a las personas ciegas o con 
-                                baja visión a usar tabletas utilizando interfaces accesibles basadas 
-                                en el tacto, el sonido, la vibración, o la voz.
-                            </p>                                                        
-                        </div>
-                    </div>
-                </div>
-                <!-- end: Row -->
-            </div>
-        </div>
-        <!-- end: Row -->
-        <hr>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+    <!-- end: Flexslider -->                
+    <hr>
+    <!-- start: Row -->
+    <div class="row">
+      <div class="span4">
+        <div class="icons-box">
+          <i class="ico-lightbulb ico-white circle-color-full big-color"></i>
+          <div class="title"><h3>Desarrolla tu idea</h3></div>
+          <p>
+            Todos tenemos ideas pero si no tienen acci&oacute;n son in&uacute;tiles, la mayor&iacute;a de tus ideas no garantizan ser geniales hasta que decides contarla a otras personas, aprovechar sus experiencias y sugerencias para mejorar tu idea lo mejor posible.                                                
+          </p>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="icons-box">
+          <i class="ico-group ico-white circle-color-full big-color"></i>
+          <div class="title"><h3>Conf&iacute;a en tu equipo</h3></div>
+          <p>
+            Selecciona cuidadosamente a los co-fundadores en base a buenas relaciones y un insuperable compromiso para emprender la aventura, esta es la mejor garant&iacute;a de la supervivencia de tu Startup.
+          </p>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="icons-box">
+          <i class="ico-alarm ico-white circle-color-full big-color"></i>
+          <div class="title"><h3>Ejecuta r&aacute;pidamente</h3></div>
+          <p>
+            Construye algo muy simple y lo m&aacute;s significativamente posible como para que los inversionistas entiendan tu idea. El exceso de ingenier&iacute;a puede arruinarte toda la aventura.
+          </p>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Row -->
+    <hr>
+    <!-- start: Row -->
+    <div class="row">
+      <div class="span9">
+        <div class="title"><h3>Últimas noticias</h3></div>
+        <!-- start: Row -->
+        <div class="row last-news-panel">
+          <% if @news.each do |news| %>
+          <div class="span3">
+            <% if news.image.exists? %>
+            <div class="picture">
+              <%= image_tag news.image.url(:thumb)%>
+            </div>
+            <% end %>
+            <div class="item-description">
+              <h4><%= link_to news.title.html_safe, news_path(news), id: 'news_#{news.id}' %></h4>
+              <p><%= HTML_Truncator.truncate(news.body, 40, :ellipsis => (link_to "... continuar", news_path(news), id: 'news_#{news.id}')).html_safe %></p>
+            </div>
+          </div>
+          <hr class="separation visible-phone">
+          <% end.empty? %>
+          <p>Sin noticias por el momento :(</p>
+          <% end %>
+
+        </div><!-- end: Row -->
+      </div>
+      <hr class="visible-phone"/>
+      <div class="span3">
+        <hr/>
+        <%= render 'shared/social_box' %>
+      </div>
+      <!-- end: Row -->
+      <hr/>
+    </div>
+  </div>

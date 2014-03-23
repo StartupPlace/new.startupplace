@@ -11,12 +11,13 @@
 		<%= f.text_field :title %>
 	</p>
 	<p>
-		<%= f.label 'Contenido' %><br/>
+		<%= f.label 'Contenido' %>
+		<span>*Procura digitar mas de 50 palaabras en el primer párrafo (sirven de descripción principal)</span><br/>
 		<%= f.cktext_area :body, rows: 10 %>
 	</p>
 	<p>
 	  <%= f.label 'Categorías' %>
-	  <span> *ejemplo: inversión, hardware, software</span>
+	  <span> *Separalas por comas, ejemplo: inversión, hardware, software</span>
 	  <br />
 	  <%= f.text_field :tag_list %>
 	</p>
@@ -30,6 +31,6 @@
 		<%= f.file_field :image %>
 	</p>
 	<p>
-		<%= f.submit "Publicar artículo" %>
+		<%= f.submit action_label %>
 	</p>
 <% end %>

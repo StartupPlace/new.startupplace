@@ -65,7 +65,7 @@ div.newsletter div.item-description {
     padding-bottom: 15px;
     h1 {
       font-size: 40px;
-    }
+    } 
     h2 {
       font-size: 32px;
     }
@@ -132,4 +132,13 @@ div.newsletter div.item-description {
 
 ul.nav-tabs{
   margin: 0 !important;
+}
+
+.last-news-panel{
+  h4{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-top: 11px;
+  }
 }
