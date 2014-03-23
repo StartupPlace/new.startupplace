@@ -74,4 +74,9 @@ $(document).on('ready', function(){
         }   
     });
 
+    $('#swu-program a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    })
+
 });

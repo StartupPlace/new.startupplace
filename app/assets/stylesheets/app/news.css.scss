@@ -41,7 +41,6 @@ div.newsletter div.item-description {
 
 .post {
 	padding: 0 0 15px 0;
-	border-bottom: 1px solid #eee;
 	margin-bottom: 10px;
 	&.post-page {
 		border-bottom: none;
@@ -50,10 +49,6 @@ div.newsletter div.item-description {
   	.post-description {
 		ul { margin-left: 15px; }
 		ol { margin-left: 38px; }
-		ul li {
-			background: image-url("icons/list/blue/list_plus.png") no-repeat 0 5px;
-			padding: 0 0 0 18px;
-		}
 	}
 	.picture {
 		margin-bottom: 0px;
@@ -72,7 +67,7 @@ div.newsletter div.item-description {
       font-size: 40px;
     }
     h2 {
-      font-size: 26px;
+      font-size: 32px;
     }
   }
 }
@@ -126,11 +121,15 @@ div.newsletter div.item-description {
   }
 }
 
-.post-page {
+.post {
   .tab-content {
     padding: 20px 0;
   }
   .nav-tabs {
     border-bottom: 1px solid #ddd !important;
   }
+}
+
+ul.nav-tabs{
+  margin: 0 !important;
 }
