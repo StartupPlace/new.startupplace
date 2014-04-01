@@ -51,23 +51,23 @@
 								<%= image_tag news.image.url(:medium)%>
 							</div>
 						<% end %>
-						<span class="post-icon standard"><i class="ico-pen circle"></i></span>
 						<div class="post-content">
 							<div class="post-title">
+								<span class="post-icon standard"><i class="ico-pen circle"></i></span>
 								<h2><%= link_to news.title.html_safe, news_path(news), id: 'news_#{news.id}' %></h2>
 							</div>
 							<div class="post-description">
 								<p>
-									<%= news.body.html_safe %>
+									<%= HTML_Truncator.truncate(news.body, 250, :ellipsis => (link_to "... continuar leyendo", news_path(news), id: 'news_#{news.id}')).html_safe %>
 								</p>
 							</div>
-							<div class="post-meta">
-								<span><i class="mini-ico-calendar"></i><%= news.created_at %></span> 
-								<span>
-									<i class="mini-ico-user"></i>
-									By <a href="#">user</a>
-								</span> 
-							</div>
+						</div>
+						<div class="post-meta">
+							<span><i class="mini-ico-calendar"></i><%= news.created_at %></span> 
+							<span>
+								<i class="mini-ico-user"></i>
+								By <a href="#">user</a>
+							</span> 
 						</div>
 					</div><!-- end: Post -->
 				<% end.empty? %>
