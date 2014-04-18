@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-  	@news = News.find(:all, :limit => 10, :order => "created_at DESC")
+  	@news = News.find(:all, :limit => 3, :order => 'created_at DESC')
   end
 
   def about
