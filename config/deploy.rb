@@ -46,7 +46,7 @@ after "deploy", "deploy:cleanup" # keep only the last 5 releases
 namespace :deploy do
 
 	task :setting_permission_on_unicorn_file, roles: :app do
-		run "chmod a+x #{current_path}/config/unicorn_init.sh"
+    run "chmod +x #{current_path}/config/unicorn_init.sh"
 	end
 	before "deploy:restart", "deploy:setting_permission_on_unicorn_file"
 
