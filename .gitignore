@@ -15,8 +15,5 @@ public/system
 public/ckeditor_assets
 public/assets/*
 
-Capfile
-config/deploy.rb
-
 sp-notes-rails.txt
 /.idea
