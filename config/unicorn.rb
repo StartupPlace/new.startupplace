@@ -1,4 +1,4 @@
-root = "/home/geoom/apps/startupplace_site/current"
+root = "/home/ubuntu/apps/startupplace_site/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
