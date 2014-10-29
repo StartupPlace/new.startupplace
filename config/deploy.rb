@@ -49,6 +49,7 @@ namespace :deploy do
     run "chmod +x #{current_path}/config/unicorn_init.sh"
 	end
 	before "deploy:start", "deploy:setting_permission_on_unicorn_file"
+  before "deploy:restart", "deploy:setting_permission_on_unicorn_file"
 
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
