@@ -1,4 +1,4 @@
 [Startupplace site](http://startupplace.org)
-================
+============================================
 
-The new startupPlace official site
+The StartupPlace web site: blog, events, workshop and more about tech entreprenurship.
